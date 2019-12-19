@@ -20,6 +20,8 @@ raw_data = bytes.fromhex(
 
 raw_data = bytes.fromhex('0a025d052208b1d45a4ddb568ca440b2c5b1e1f12d5216202053656e742066726f6d2054726f6e57616c6c65745a68080112640a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412330a154143458c9f0ffbff6d093093668e76e80d567c6ec51215412b9f0c78c974855a4a33028094bef4538acc8e2718f891881a70f3b682a4b511')
 
+raw_data = bytes.fromhex('0a025e5b2208cbdd62dee287ae7d4090d4e4e1f12d5aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541dafa937dd5c79d6d0bd885fae3f841b7bf2b143d12154174472e7d35395a6b5add427eecb7f4b62ad2b0712244a9059cbb0000000000000000000000007754b125e780b84b709382e3fe68ee0b7d003fc500000000000000000000000000000000000000000000000000000593ccabf8cf70e088e1e1f12d900180ade204')
+
 raw_obj = tron_pb.Transaction.raw.FromString(raw_data)
 print(raw_obj)
 
@@ -40,3 +42,8 @@ elif contract.type == tron_pb.Transaction.Contract.VoteWitnessContract:
     assert contract.parameter.type_url == 'type.googleapis.com/protocol.VoteWitnessContract'
     vote = contract_pb.VoteWitnessContract.FromString(contract.parameter.value)
     print(vote)
+
+elif contract.type == tron_pb.Transaction.Contract.TriggerSmartContract:
+    assert contract.parameter.type_url == 'type.googleapis.com/protocol.TriggerSmartContract'
+    trigger = contract_pb.TriggerSmartContract.FromString(contract.parameter.value)
+    print(trigger)
