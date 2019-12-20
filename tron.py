@@ -2,6 +2,7 @@ import hashlib
 
 import base58
 import ecdsa
+
 from eth_hash.auto import keccak as keccak_256
 
 # secp256k1
@@ -18,6 +19,17 @@ priv_key = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 pub_key = priv_key.get_verifying_key().to_string()
 primitive_addr = b'\x41' + keccak_256(pub_key)[-20:]
 addr = base58.b58encode_check(primitive_addr)
+
+def verifying_key_to_addr(key):
+    pub_key = key.to_string()
+    primitive_addr = b'\x41' + keccak_256(pub_key)[-20:]
+    addr = base58.b58encode_check(primitive_addr)
+    return addr
+
+
+#def ecdsa_pub_key_to_addr(pub_key):
+# # pub_key = priv_key.get_verifying_key().to_string()
+# primitive_addr = b'\x41' + keccak_256(pub_key)[-20:]
 
 print(addr)
 
@@ -53,14 +65,52 @@ print('-' * 80)
 tx_id = bytes.fromhex('1275ac815e624f3a0e59c5d598f19ee2d5a50dd1736e37659e6b0c40f19cdeec')
 
 # sign transaction
-raw_data = bytes.fromhex('0a02d33222081a2ce1f1010d5fe540d0f685e8f12d5a68080112640a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412330a15419cf784b4cc7531f1598c4c322de9afdc597fe760121541340967e825557559dc46bbf0eabe5ccf99fd134e18c0e7fb0a70ccaf82e8f12d')
-sign = priv_key.sign_deterministic(raw_data, hashfunc=hashlib.sha256)
+raw_data = bytes.fromhex('0a02321c2208355f3d397c43f91a40d08fe88af22d5a68080112640a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412330a15419cf784b4cc7531f1598c4c322de9afdc597fe760121541340967e825557559dc46bbf0eabe5ccf99fd134e18c0e7fb0a70bccce48af22d')
+
+def signencode(r, s, order):
+    return r.to_bytes(32, 'big') + s.to_bytes(32, 'big')
+
+sign = priv_key.sign_deterministic(raw_data, hashfunc=hashlib.sha256, sigencode=signencode)
 
 print('sign', sign.hex())
 
-print('orig', 'dc2c6b3f97f64e043a3dfe37d7686dbb1ab21e3271b372c6de1c6ba0a4ff609b8e62254629ce9027d247c3eca49bf481f3bc8eee7bcca4dc1a28c6b158519c0300')
+print('orig', 'f403e2cd5bc0f21a9f6e1297bc03e7830d9a3631c7bb470ffe99febb1a132045dcb3970f973c2ea54a0b62d21a4b44bfb4b8fd7049b49ec02d11687a02be2fc201')
 
 # r, s, v=0
+
+orig = 'dc2c6b3f97f64e043a3dfe37d7686dbb1ab21e3271b372c6de1c6ba0a4ff609b8e62254629ce9027d247c3eca49bf481f3bc8eee7bcca4dc1a28c6b158519c0300'
+
+def int_to_big_endian(value: int) -> bytes:
+    return value.to_bytes((value.bit_length() + 7) // 8 or 1, "big")
+
+def big_endian_to_int(value: bytes) -> int:
+    return int.from_bytes(value, "big")
+
+def recover_addr(signature, msg_hash):
+    signature = bytes.fromhex(signature)
+    if len(signature) != 65:
+        raise ValueError
+
+    r = big_endian_to_int(signature[0:32])
+    s = big_endian_to_int(signature[32:64])
+    # v = ord(signature[64:65])  # version: u8
+
+    #sig = ecdsa.ecdsa.Signature(r, s)
+    #pub_keys = sig.recover_public_keys(hash=msg_hash, generator=ecdsa.SECP256k1.generator)
+    pub_keys = ecdsa.VerifyingKey.from_public_key_recovery_with_digest(
+        signature[:64], msg_hash, curve=ecdsa.SECP256k1,
+        hashfunc=hashlib.sha256
+    )
+
+    print(r, s)
+    print(pub_keys)
+
+    for pk in pub_keys:
+        print(verifying_key_to_addr(pk))
+
+msg_hash = hashlib.sha256(raw_data).digest()
+recover_addr(orig, msg_hash)
+
 
 # transaction
 """
