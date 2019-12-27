@@ -3,3 +3,5 @@ protobuf==3.11.1
 requests==2.22.0
 base58
 ecdsa
+grpcio
+grpcio-tools

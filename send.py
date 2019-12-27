@@ -27,6 +27,9 @@ raw_priv_key = bytes.fromhex('d705fc17c82942f85848ab522e42d986279028d09d12ad881b
 
 priv_key = ecdsa.SigningKey.from_string(raw_priv_key, curve=ecdsa.SECP256k1)
 pub_key = priv_key.get_verifying_key().to_string()
+
+print('Pub Key:', pub_key.hex())
+
 primitive_addr = b'\x41' + keccak_256(pub_key)[-20:]
 addr = base58.b58encode_check(primitive_addr)
 
