@@ -16,8 +16,8 @@ def verifying_key_to_addr(key):
     return addr
 
 
-for i in range(1, 16-1):
+for i in range(1, 16 - 1):
     raw = hex(i)[-1] * 64
-    # print(raw)
     key = get_signing_key(bytes.fromhex(raw))
-    print(verifying_key_to_addr(key.get_verifying_key()).decode())
+    print('ADDR:', verifying_key_to_addr(key.get_verifying_key()).decode())
+    print('    :', raw)

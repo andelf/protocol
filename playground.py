@@ -37,6 +37,9 @@ raw_data = bytes.fromhex('0a0212462208055912e38b80f75e40f083f5c5f12d5aa301080412
 
 # raw_data = bytes.fromhex('0a029f9122082fc729fb70fb41514098d7d790f32d5a860108041281010a30747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e566f74655769746e657373436f6e7472616374124d0a1541340967e825557559dc46bbf0eabe5ccf99fd134e12190a1541f16412b9a17ee9408646e2a21e16478f72ed1e95100312190a1541f1a0466076c57c9f6d07decc86021ddbf8bae0b2100570c392d490f32d')
 
+
+
+
 raw_obj = tron_pb.Transaction.raw.FromString(raw_data)
 print(raw_obj)
 
@@ -76,3 +79,18 @@ elif contract.type == tron_pb.Transaction.Contract.TriggerSmartContract:
 elif contract.type == tron_pb.Transaction.Contract.TransferAssetContract:
     trxfer = contract_pb.TransferAssetContract.FromString(contract.parameter.value)
     print(trxfer)
+
+
+
+print("-" * 80)
+raw_data = bytes.fromhex('0a1541b5f8a2ab78bfb1afea17558f8a32d1c988283019121541e42d76d15b7ecd27a92cc9551738c2635c63b71c1880ab8f122244a3082be900000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000001')
+
+trigger = contract_pb.TriggerSmartContract.FromString(raw_data)
+print(trigger)
+print(trigger.data[:4])
+
+print(trigger.data[:4].hex())
+
+from eth_hash.auto import keccak as keccak_256
+
+print(keccak_256(b'GoodLuck(uint256,uint256)')[:4])
