@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='protocol',
   syntax='proto3',
   serialized_options=_b('\n\014org.tron.apiB\007GrpcAPIZ(github.com/tronprotocol/grpc-gateway/api'),
-  serialized_pb=_b('\n\rapi/api.proto\x12\x08protocol\x1a\x0f\x63ore/Tron.proto\x1a\x13\x63ore/Contract.proto\x1a\x1cgoogle/api/annotations.proto\"\x94\x03\n\x06Return\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12,\n\x04\x63ode\x18\x02 \x01(\x0e\x32\x1e.protocol.Return.response_code\x12\x0f\n\x07message\x18\x03 \x01(\x0c\"\xba\x02\n\rresponse_code\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0c\n\x08SIGERROR\x10\x01\x12\x1b\n\x17\x43ONTRACT_VALIDATE_ERROR\x10\x02\x12\x16\n\x12\x43ONTRACT_EXE_ERROR\x10\x03\x12\x12\n\x0e\x42\x41NDWITH_ERROR\x10\x04\x12\x19\n\x15\x44UP_TRANSACTION_ERROR\x10\x05\x12\x0f\n\x0bTAPOS_ERROR\x10\x06\x12\x1d\n\x19TOO_BIG_TRANSACTION_ERROR\x10\x07\x12 \n\x1cTRANSACTION_EXPIRATION_ERROR\x10\x08\x12\x0f\n\x0bSERVER_BUSY\x10\t\x12\x11\n\rNO_CONNECTION\x10\n\x12#\n\x1fNOT_ENOUGH_EFFECTIVE_CONNECTION\x10\x0b\x12\x0f\n\x0bOTHER_ERROR\x10\x14\"7\n\x0e\x42lockReference\x12\x11\n\tblock_num\x18\x01 \x01(\x03\x12\x12\n\nblock_hash\x18\x02 \x01(\x0c\"3\n\x0bWitnessList\x12$\n\twitnesses\x18\x01 \x03(\x0b\x32\x11.protocol.Witness\"5\n\x0cProposalList\x12%\n\tproposals\x18\x01 \x03(\x0b\x32\x12.protocol.Proposal\"5\n\x0c\x45xchangeList\x12%\n\texchanges\x18\x01 \x03(\x0b\x32\x12.protocol.Exchange\"B\n\x0e\x41ssetIssueList\x12\x30\n\nassetIssue\x18\x01 \x03(\x0b\x32\x1c.protocol.AssetIssueContract\"+\n\tBlockList\x12\x1e\n\x05\x62lock\x18\x01 \x03(\x0b\x32\x0f.protocol.Block\"=\n\x0fTransactionList\x12*\n\x0btransaction\x18\x01 \x03(\x0b\x32\x15.protocol.Transaction\"B\n\x18\x44\x65legatedResourceMessage\x12\x13\n\x0b\x66romAddress\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\"O\n\x15\x44\x65legatedResourceList\x12\x36\n\x11\x64\x65legatedResource\x18\x01 \x03(\x0b\x32\x1b.protocol.DelegatedResource\")\n\x08NodeList\x12\x1d\n\x05nodes\x18\x01 \x03(\x0b\x32\x0e.protocol.Node\"*\n\x04Node\x12\"\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\x11.protocol.Address\"%\n\x07\x41\x64\x64ress\x12\x0c\n\x04host\x18\x01 \x01(\x0c\x12\x0c\n\x04port\x18\x02 \x01(\x05\"\x0e\n\x0c\x45mptyMessage\"\x1c\n\rNumberMessage\x12\x0b\n\x03num\x18\x01 \x01(\x03\"\x1d\n\x0c\x42ytesMessage\x12\r\n\x05value\x18\x01 \x01(\x0c\"E\n\x0bTimeMessage\x12\x1b\n\x13\x62\x65ginInMilliseconds\x18\x01 \x01(\x03\x12\x19\n\x11\x65ndInMilliseconds\x18\x02 \x01(\x03\".\n\nBlockLimit\x12\x10\n\x08startNum\x18\x01 \x01(\x03\x12\x0e\n\x06\x65ndNum\x18\x02 \x01(\x03\";\n\x10TransactionLimit\x12\x15\n\rtransactionId\x18\x01 \x01(\x0c\x12\x10\n\x08limitNum\x18\x02 \x01(\x03\"U\n\x10\x41\x63\x63ountPaginated\x12\"\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x11.protocol.Account\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\x03\"a\n\x14TimePaginatedMessage\x12*\n\x0btimeMessage\x18\x01 \x01(\x0b\x32\x15.protocol.TimeMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\x03\"\x87\x03\n\x11\x41\x63\x63ountNetMessage\x12\x13\n\x0b\x66reeNetUsed\x18\x01 \x01(\x03\x12\x14\n\x0c\x66reeNetLimit\x18\x02 \x01(\x03\x12\x0f\n\x07NetUsed\x18\x03 \x01(\x03\x12\x10\n\x08NetLimit\x18\x04 \x01(\x03\x12\x43\n\x0c\x61ssetNetUsed\x18\x05 \x03(\x0b\x32-.protocol.AccountNetMessage.AssetNetUsedEntry\x12\x45\n\rassetNetLimit\x18\x06 \x03(\x0b\x32..protocol.AccountNetMessage.AssetNetLimitEntry\x12\x15\n\rTotalNetLimit\x18\x07 \x01(\x03\x12\x16\n\x0eTotalNetWeight\x18\x08 \x01(\x03\x1a\x33\n\x11\x41ssetNetUsedEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\x34\n\x12\x41ssetNetLimitEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"\x9f\x04\n\x16\x41\x63\x63ountResourceMessage\x12\x13\n\x0b\x66reeNetUsed\x18\x01 \x01(\x03\x12\x14\n\x0c\x66reeNetLimit\x18\x02 \x01(\x03\x12\x0f\n\x07NetUsed\x18\x03 \x01(\x03\x12\x10\n\x08NetLimit\x18\x04 \x01(\x03\x12H\n\x0c\x61ssetNetUsed\x18\x05 \x03(\x0b\x32\x32.protocol.AccountResourceMessage.AssetNetUsedEntry\x12J\n\rassetNetLimit\x18\x06 \x03(\x0b\x32\x33.protocol.AccountResourceMessage.AssetNetLimitEntry\x12\x15\n\rTotalNetLimit\x18\x07 \x01(\x03\x12\x16\n\x0eTotalNetWeight\x18\x08 \x01(\x03\x12\x12\n\nEnergyUsed\x18\r \x01(\x03\x12\x13\n\x0b\x45nergyLimit\x18\x0e \x01(\x03\x12\x18\n\x10TotalEnergyLimit\x18\x0f \x01(\x03\x12\x19\n\x11TotalEnergyWeight\x18\x10 \x01(\x03\x12\x13\n\x0bstorageUsed\x18\x15 \x01(\x03\x12\x14\n\x0cstorageLimit\x18\x16 \x01(\x03\x1a\x33\n\x11\x41ssetNetUsedEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\x34\n\x12\x41ssetNetLimitEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"1\n\x10PaginatedMessage\x12\x0e\n\x06offset\x18\x01 \x01(\x03\x12\r\n\x05limit\x18\x02 \x01(\x03\"L\n\x13\x45\x61syTransferMessage\x12\x12\n\npassPhrase\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"b\n\x18\x45\x61syTransferAssetMessage\x12\x12\n\npassPhrase\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"U\n\x1c\x45\x61syTransferByPrivateMessage\x12\x12\n\nprivateKey\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"k\n!EasyTransferAssetByPrivateMessage\x12\x12\n\nprivateKey\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"r\n\x14\x45\x61syTransferResponse\x12*\n\x0btransaction\x18\x01 \x01(\x0b\x32\x15.protocol.Transaction\x12 \n\x06result\x18\x02 \x01(\x0b\x32\x10.protocol.Return\x12\x0c\n\x04txid\x18\x03 \x01(\x0c\">\n\x17\x41\x64\x64ressPrKeyPairMessage\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x12\n\nprivateKey\x18\x02 \x01(\t\"\x8b\x01\n\x14TransactionExtention\x12*\n\x0btransaction\x18\x01 \x01(\x0b\x32\x15.protocol.Transaction\x12\x0c\n\x04txid\x18\x02 \x01(\x0c\x12\x17\n\x0f\x63onstant_result\x18\x03 \x03(\x0c\x12 \n\x06result\x18\x04 \x01(\x0b\x32\x10.protocol.Return\"\x84\x01\n\x0e\x42lockExtention\x12\x34\n\x0ctransactions\x18\x01 \x03(\x0b\x32\x1e.protocol.TransactionExtention\x12+\n\x0c\x62lock_header\x18\x02 \x01(\x0b\x32\x15.protocol.BlockHeader\x12\x0f\n\x07\x62lockid\x18\x03 \x01(\x0c\"=\n\x12\x42lockListExtention\x12\'\n\x05\x62lock\x18\x01 \x03(\x0b\x32\x18.protocol.BlockExtention\"O\n\x18TransactionListExtention\x12\x33\n\x0btransaction\x18\x01 \x03(\x0b\x32\x1e.protocol.TransactionExtention\"\xdf\x03\n\x15TransactionSignWeight\x12(\n\npermission\x18\x01 \x01(\x0b\x32\x14.protocol.Permission\x12\x15\n\rapproved_list\x18\x02 \x03(\x0c\x12\x16\n\x0e\x63urrent_weight\x18\x03 \x01(\x03\x12\x36\n\x06result\x18\x04 \x01(\x0b\x32&.protocol.TransactionSignWeight.Result\x12\x33\n\x0btransaction\x18\x05 \x01(\x0b\x32\x1e.protocol.TransactionExtention\x1a\xff\x01\n\x06Result\x12\x42\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x34.protocol.TransactionSignWeight.Result.response_code\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x9f\x01\n\rresponse_code\x12\x15\n\x11\x45NOUGH_PERMISSION\x10\x00\x12\x19\n\x15NOT_ENOUGH_PERMISSION\x10\x01\x12\x1a\n\x16SIGNATURE_FORMAT_ERROR\x10\x02\x12\x19\n\x15\x43OMPUTE_ADDRESS_ERROR\x10\x03\x12\x14\n\x10PERMISSION_ERROR\x10\x04\x12\x0f\n\x0bOTHER_ERROR\x10\x14\"\xe7\x02\n\x17TransactionApprovedList\x12\x15\n\rapproved_list\x18\x02 \x03(\x0c\x12\x38\n\x06result\x18\x04 \x01(\x0b\x32(.protocol.TransactionApprovedList.Result\x12\x33\n\x0btransaction\x18\x05 \x01(\x0b\x32\x1e.protocol.TransactionExtention\x1a\xc5\x01\n\x06Result\x12\x44\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x36.protocol.TransactionApprovedList.Result.response_code\x12\x0f\n\x07message\x18\x02 \x01(\t\"d\n\rresponse_code\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16SIGNATURE_FORMAT_ERROR\x10\x01\x12\x19\n\x15\x43OMPUTE_ADDRESS_ERROR\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x14\x32\x80T\n\x06Wallet\x12g\n\nGetAccount\x12\x11.protocol.Account\x1a\x11.protocol.Account\"3\x82\xd3\xe4\x93\x02-\"\x12/wallet/getaccount:\x01*Z\x14\x12\x12/wallet/getaccount\x12s\n\x0eGetAccountById\x12\x11.protocol.Account\x1a\x11.protocol.Account\";\x82\xd3\xe4\x93\x02\x35\"\x16/wallet/getaccountbyid:\x01*Z\x18\x12\x16/wallet/getaccountbyid\x12\x89\x01\n\x11\x43reateTransaction\x12\x1a.protocol.TransferContract\x1a\x15.protocol.Transaction\"A\x82\xd3\xe4\x93\x02;\"\x19/wallet/createtransaction:\x01*Z\x1b\x12\x19/wallet/createtransaction\x12R\n\x12\x43reateTransaction2\x12\x1a.protocol.TransferContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x88\x01\n\x14\x42roadcastTransaction\x12\x15.protocol.Transaction\x1a\x10.protocol.Return\"G\x82\xd3\xe4\x93\x02\x41\"\x1c/wallet/broadcasttransaction:\x01*Z\x1e\x12\x1c/wallet/broadcasttransaction\x12\x82\x01\n\rUpdateAccount\x12\x1f.protocol.AccountUpdateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/updateaccount:\x01*Z\x17\x12\x15/wallet/updateaccount\x12~\n\x0cSetAccountId\x12\x1e.protocol.SetAccountIdContract\x1a\x15.protocol.Transaction\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/setaccountid:\x01*Z\x16\x12\x14/wallet/setaccountid\x12S\n\x0eUpdateAccount2\x12\x1f.protocol.AccountUpdateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8f\x01\n\x12VoteWitnessAccount\x12\x1d.protocol.VoteWitnessContract\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/votewitnessaccount:\x01*Z\x1c\x12\x1a/wallet/votewitnessaccount\x12R\n\rUpdateSetting\x12\x1f.protocol.UpdateSettingContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12Z\n\x11UpdateEnergyLimit\x12#.protocol.UpdateEnergyLimitContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x13VoteWitnessAccount2\x12\x1d.protocol.VoteWitnessContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x88\x01\n\x10\x43reateAssetIssue\x12\x1c.protocol.AssetIssueContract\x1a\x15.protocol.Transaction\"?\x82\xd3\xe4\x93\x02\x39\"\x18/wallet/createassetissue:\x01*Z\x1a\x12\x18/wallet/createassetissue\x12S\n\x11\x43reateAssetIssue2\x12\x1c.protocol.AssetIssueContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rUpdateWitness\x12\x1f.protocol.WitnessUpdateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/updatewitness:\x01*Z\x17\x12\x15/wallet/updatewitness\x12S\n\x0eUpdateWitness2\x12\x1f.protocol.WitnessUpdateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rCreateAccount\x12\x1f.protocol.AccountCreateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createaccount:\x01*Z\x17\x12\x15/wallet/createaccount\x12S\n\x0e\x43reateAccount2\x12\x1f.protocol.AccountCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rCreateWitness\x12\x1f.protocol.WitnessCreateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createwitness:\x01*Z\x17\x12\x15/wallet/createwitness\x12S\n\x0e\x43reateWitness2\x12\x1f.protocol.WitnessCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rTransferAsset\x12\x1f.protocol.TransferAssetContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/transferasset:\x01*Z\x17\x12\x15/wallet/transferasset\x12S\n\x0eTransferAsset2\x12\x1f.protocol.TransferAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\xa2\x01\n\x15ParticipateAssetIssue\x12\'.protocol.ParticipateAssetIssueContract\x1a\x15.protocol.Transaction\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/wallet/participateassetissue:\x01*Z\x1f\x12\x1d/wallet/participateassetissue\x12\x63\n\x16ParticipateAssetIssue2\x12\'.protocol.ParticipateAssetIssueContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rFreezeBalance\x12\x1f.protocol.FreezeBalanceContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/freezebalance:\x01*Z\x17\x12\x15/wallet/freezebalance\x12S\n\x0e\x46reezeBalance2\x12\x1f.protocol.FreezeBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8a\x01\n\x0fUnfreezeBalance\x12!.protocol.UnfreezeBalanceContract\x1a\x15.protocol.Transaction\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/unfreezebalance:\x01*Z\x19\x12\x17/wallet/unfreezebalance\x12W\n\x10UnfreezeBalance2\x12!.protocol.UnfreezeBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rUnfreezeAsset\x12\x1f.protocol.UnfreezeAssetContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/unfreezeasset:\x01*Z\x17\x12\x15/wallet/unfreezeasset\x12S\n\x0eUnfreezeAsset2\x12\x1f.protocol.UnfreezeAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8a\x01\n\x0fWithdrawBalance\x12!.protocol.WithdrawBalanceContract\x1a\x15.protocol.Transaction\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/withdrawbalance:\x01*Z\x19\x12\x17/wallet/withdrawbalance\x12W\n\x10WithdrawBalance2\x12!.protocol.WithdrawBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12z\n\x0bUpdateAsset\x12\x1d.protocol.UpdateAssetContract\x1a\x15.protocol.Transaction\"5\x82\xd3\xe4\x93\x02/\"\x13/wallet/updateasset:\x01*Z\x15\x12\x13/wallet/updateasset\x12O\n\x0cUpdateAsset2\x12\x1d.protocol.UpdateAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0eProposalCreate\x12 .protocol.ProposalCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x0fProposalApprove\x12!.protocol.ProposalApproveContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0eProposalDelete\x12 .protocol.ProposalDeleteContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12L\n\nBuyStorage\x12\x1c.protocol.BuyStorageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x0f\x42uyStorageBytes\x12!.protocol.BuyStorageBytesContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12N\n\x0bSellStorage\x12\x1d.protocol.SellStorageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0e\x45xchangeCreate\x12 .protocol.ExchangeCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0e\x45xchangeInject\x12 .protocol.ExchangeInjectContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12X\n\x10\x45xchangeWithdraw\x12\".protocol.ExchangeWithdrawContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12^\n\x13\x45xchangeTransaction\x12%.protocol.ExchangeTransactionContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12j\n\tListNodes\x12\x16.protocol.EmptyMessage\x1a\x12.protocol.NodeList\"1\x82\xd3\xe4\x93\x02+\"\x11/wallet/listnodes:\x01*Z\x13\x12\x11/wallet/listnodes\x12\x92\x01\n\x16GetAssetIssueByAccount\x12\x11.protocol.Account\x1a\x18.protocol.AssetIssueList\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/getassetissuebyaccount:\x01*Z \x12\x1e/wallet/getassetissuebyaccount\x12z\n\rGetAccountNet\x12\x11.protocol.Account\x1a\x1b.protocol.AccountNetMessage\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/getaccountnet:\x01*Z\x17\x12\x15/wallet/getaccountnet\x12K\n\x12GetAccountResource\x12\x11.protocol.Account\x1a .protocol.AccountResourceMessage\"\x00\x12\x92\x01\n\x13GetAssetIssueByName\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getassetissuebyname:\x01*Z\x1d\x12\x1b/wallet/getassetissuebyname\x12M\n\x17GetAssetIssueListByName\x12\x16.protocol.BytesMessage\x1a\x18.protocol.AssetIssueList\"\x00\x12K\n\x11GetAssetIssueById\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12m\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"5\x82\xd3\xe4\x93\x02/\"\x13/wallet/getnowblock:\x01*Z\x15\x12\x13/wallet/getnowblock\x12\x42\n\x0cGetNowBlock2\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockExtention\"\x00\x12t\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/getblockbynum:\x01*Z\x17\x12\x15/wallet/getblockbynum\x12\x45\n\x0eGetBlockByNum2\x12\x17.protocol.NumberMessage\x1a\x18.protocol.BlockExtention\"\x00\x12S\n\x1dGetTransactionCountByBlockNum\x12\x17.protocol.NumberMessage\x1a\x17.protocol.NumberMessage\"\x00\x12p\n\x0cGetBlockById\x12\x16.protocol.BytesMessage\x1a\x0f.protocol.Block\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/getblockbyid:\x01*Z\x16\x12\x14/wallet/getblockbyid\x12\x87\x01\n\x13GetBlockByLimitNext\x12\x14.protocol.BlockLimit\x1a\x13.protocol.BlockList\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getblockbylimitnext:\x01*Z\x1d\x12\x1b/wallet/getblockbylimitnext\x12L\n\x14GetBlockByLimitNext2\x12\x14.protocol.BlockLimit\x1a\x1c.protocol.BlockListExtention\"\x00\x12\x8a\x01\n\x13GetBlockByLatestNum\x12\x17.protocol.NumberMessage\x1a\x13.protocol.BlockList\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getblockbylatestnum:\x01*Z\x1d\x12\x1b/wallet/getblockbylatestnum\x12O\n\x14GetBlockByLatestNum2\x12\x17.protocol.NumberMessage\x1a\x1c.protocol.BlockListExtention\"\x00\x12\x88\x01\n\x12GetTransactionById\x12\x16.protocol.BytesMessage\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/gettransactionbyid:\x01*Z\x1c\x12\x1a/wallet/gettransactionbyid\x12Q\n\x0e\x44\x65ployContract\x12\x1d.protocol.CreateSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12@\n\x0bGetContract\x12\x16.protocol.BytesMessage\x1a\x17.protocol.SmartContract\"\x00\x12S\n\x0fTriggerContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12[\n\x17TriggerConstantContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12P\n\x10\x43learContractABI\x12\x1a.protocol.ClearABIContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12y\n\rListWitnesses\x12\x16.protocol.EmptyMessage\x1a\x15.protocol.WitnessList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listwitnesses:\x01*Z\x17\x12\x15/wallet/listwitnesses\x12]\n\x14GetDelegatedResource\x12\".protocol.DelegatedResourceMessage\x1a\x1f.protocol.DelegatedResourceList\"\x00\x12\x65\n GetDelegatedResourceAccountIndex\x12\x16.protocol.BytesMessage\x1a\'.protocol.DelegatedResourceAccountIndex\"\x00\x12z\n\rListProposals\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ProposalList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listproposals:\x01*Z\x17\x12\x15/wallet/listproposals\x12\x9f\x01\n\x18GetPaginatedProposalList\x12\x1a.protocol.PaginatedMessage\x1a\x16.protocol.ProposalList\"O\x82\xd3\xe4\x93\x02I\" /wallet/getpaginatedproposallist:\x01*Z\"\x12 /wallet/getpaginatedproposallist\x12|\n\x0fGetProposalById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Proposal\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/getproposalbyid:\x01*Z\x19\x12\x17/wallet/getproposalbyid\x12z\n\rListExchanges\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ExchangeList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listexchanges:\x01*Z\x17\x12\x15/wallet/listexchanges\x12\x9f\x01\n\x18GetPaginatedExchangeList\x12\x1a.protocol.PaginatedMessage\x1a\x16.protocol.ExchangeList\"O\x82\xd3\xe4\x93\x02I\" /wallet/getpaginatedexchangelist:\x01*Z\"\x12 /wallet/getpaginatedexchangelist\x12|\n\x0fGetExchangeById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Exchange\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/getexchangebyid:\x01*Z\x19\x12\x17/wallet/getexchangebyid\x12\x8c\x01\n\x12GetChainParameters\x12\x16.protocol.EmptyMessage\x1a\x19.protocol.ChainParameters\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/getchainparameters:\x01*Z\x1c\x12\x1a/wallet/getchainparameters\x12\x88\x01\n\x11GetAssetIssueList\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.AssetIssueList\"A\x82\xd3\xe4\x93\x02;\"\x19/wallet/getassetissuelist:\x01*Z\x1b\x12\x19/wallet/getassetissuelist\x12\xa7\x01\n\x1aGetPaginatedAssetIssueList\x12\x1a.protocol.PaginatedMessage\x1a\x18.protocol.AssetIssueList\"S\x82\xd3\xe4\x93\x02M\"\"/wallet/getpaginatedassetissuelist:\x01*Z$\x12\"/wallet/getpaginatedassetissuelist\x12\x84\x01\n\x10TotalTransaction\x12\x16.protocol.EmptyMessage\x1a\x17.protocol.NumberMessage\"?\x82\xd3\xe4\x93\x02\x39\"\x18/wallet/totaltransaction:\x01*Z\x1a\x12\x18/wallet/totaltransaction\x12\x96\x01\n\x16GetNextMaintenanceTime\x12\x16.protocol.EmptyMessage\x1a\x17.protocol.NumberMessage\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/getnextmaintenancetime:\x01*Z \x12\x1e/wallet/getnextmaintenancetime\x12\x8b\x01\n\x12GetTransactionSign\x12\x19.protocol.TransactionSign\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/gettransactionsign:\x01*Z\x1c\x12\x1a/wallet/gettransactionsign\x12R\n\x13GetTransactionSign2\x12\x19.protocol.TransactionSign\x1a\x1e.protocol.TransactionExtention\"\x00\x12z\n\rCreateAddress\x12\x16.protocol.BytesMessage\x1a\x16.protocol.BytesMessage\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createaddress:\x01*Z\x17\x12\x15/wallet/createaddress\x12Y\n\x11\x45\x61syTransferAsset\x12\".protocol.EasyTransferAssetMessage\x1a\x1e.protocol.EasyTransferResponse\"\x00\x12k\n\x1a\x45\x61syTransferAssetByPrivate\x12+.protocol.EasyTransferAssetByPrivateMessage\x1a\x1e.protocol.EasyTransferResponse\"\x00\x12\x86\x01\n\x0c\x45\x61syTransfer\x12\x1d.protocol.EasyTransferMessage\x1a\x1e.protocol.EasyTransferResponse\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/easytransfer:\x01*Z\x16\x12\x14/wallet/easytransfer\x12\xaa\x01\n\x15\x45\x61syTransferByPrivate\x12&.protocol.EasyTransferByPrivateMessage\x1a\x1e.protocol.EasyTransferResponse\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/wallet/easytransferbyprivate:\x01*Z\x1f\x12\x1d/wallet/easytransferbyprivate\x12\x8b\x01\n\x0fGenerateAddress\x12\x16.protocol.EmptyMessage\x1a!.protocol.AddressPrKeyPairMessage\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/generateaddress:\x01*Z\x19\x12\x17/wallet/generateaddress\x12\x98\x01\n\x16GetTransactionInfoById\x12\x16.protocol.BytesMessage\x1a\x19.protocol.TransactionInfo\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/gettransactioninfobyid:\x01*Z \x12\x1e/wallet/gettransactioninfobyid\x12\xb3\x01\n\x17\x41\x63\x63ountPermissionUpdate\x12).protocol.AccountPermissionUpdateContract\x1a\x1e.protocol.TransactionExtention\"M\x82\xd3\xe4\x93\x02G\"\x1f/wallet/accountpermissionupdate:\x01*Z!\x12\x1f/wallet/accountpermissionupdate\x12\x46\n\x07\x41\x64\x64Sign\x12\x19.protocol.TransactionSign\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x18GetTransactionSignWeight\x12\x15.protocol.Transaction\x1a\x1f.protocol.TransactionSignWeight\"\x00\x12X\n\x1aGetTransactionApprovedList\x12\x15.protocol.Transaction\x1a!.protocol.TransactionApprovedList\"\x00\x12;\n\x0bGetNodeInfo\x12\x16.protocol.EmptyMessage\x1a\x12.protocol.NodeInfo\"\x00\x12\x42\n\rGetRewardInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12\x45\n\x10GetBrokerageInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12V\n\x0fUpdateBrokerage\x12!.protocol.UpdateBrokerageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x32\xd7\x13\n\x0eWalletSolidity\x12w\n\nGetAccount\x12\x11.protocol.Account\x1a\x11.protocol.Account\"C\x82\xd3\xe4\x93\x02=\"\x1a/walletsolidity/getaccount:\x01*Z\x1c\x12\x1a/walletsolidity/getaccount\x12\x83\x01\n\x0eGetAccountById\x12\x11.protocol.Account\x1a\x11.protocol.Account\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/walletsolidity/getaccountbyid:\x01*Z \x12\x1e/walletsolidity/getaccountbyid\x12\x89\x01\n\rListWitnesses\x12\x16.protocol.EmptyMessage\x1a\x15.protocol.WitnessList\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/walletsolidity/listwitnesses:\x01*Z\x1f\x12\x1d/walletsolidity/listwitnesses\x12\x98\x01\n\x11GetAssetIssueList\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.AssetIssueList\"Q\x82\xd3\xe4\x93\x02K\"!/walletsolidity/getassetissuelist:\x01*Z#\x12!/walletsolidity/getassetissuelist\x12\xb7\x01\n\x1aGetPaginatedAssetIssueList\x12\x1a.protocol.PaginatedMessage\x1a\x18.protocol.AssetIssueList\"c\x82\xd3\xe4\x93\x02]\"*/walletsolidity/getpaginatedassetissuelist:\x01*Z,\x12*/walletsolidity/getpaginatedassetissuelist\x12M\n\x13GetAssetIssueByName\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12M\n\x17GetAssetIssueListByName\x12\x16.protocol.BytesMessage\x1a\x18.protocol.AssetIssueList\"\x00\x12K\n\x11GetAssetIssueById\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12}\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"E\x82\xd3\xe4\x93\x02?\"\x1b/walletsolidity/getnowblock:\x01*Z\x1d\x12\x1b/walletsolidity/getnowblock\x12\x42\n\x0cGetNowBlock2\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockExtention\"\x00\x12\x84\x01\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/walletsolidity/getblockbynum:\x01*Z\x1f\x12\x1d/walletsolidity/getblockbynum\x12\x45\n\x0eGetBlockByNum2\x12\x17.protocol.NumberMessage\x1a\x18.protocol.BlockExtention\"\x00\x12S\n\x1dGetTransactionCountByBlockNum\x12\x17.protocol.NumberMessage\x1a\x17.protocol.NumberMessage\"\x00\x12]\n\x14GetDelegatedResource\x12\".protocol.DelegatedResourceMessage\x1a\x1f.protocol.DelegatedResourceList\"\x00\x12\x65\n GetDelegatedResourceAccountIndex\x12\x16.protocol.BytesMessage\x1a\'.protocol.DelegatedResourceAccountIndex\"\x00\x12?\n\x0fGetExchangeById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Exchange\"\x00\x12\x41\n\rListExchanges\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ExchangeList\"\x00\x12\x98\x01\n\x12GetTransactionById\x12\x16.protocol.BytesMessage\x1a\x15.protocol.Transaction\"S\x82\xd3\xe4\x93\x02M\"\"/walletsolidity/gettransactionbyid:\x01*Z$\x12\"/walletsolidity/gettransactionbyid\x12\xa8\x01\n\x16GetTransactionInfoById\x12\x16.protocol.BytesMessage\x1a\x19.protocol.TransactionInfo\"[\x82\xd3\xe4\x93\x02U\"&/walletsolidity/gettransactioninfobyid:\x01*Z(\x12&/walletsolidity/gettransactioninfobyid\x12\x9b\x01\n\x0fGenerateAddress\x12\x16.protocol.EmptyMessage\x1a!.protocol.AddressPrKeyPairMessage\"M\x82\xd3\xe4\x93\x02G\"\x1f/walletsolidity/generateaddress:\x01*Z!\x12\x1f/walletsolidity/generateaddress\x12[\n\x17TriggerConstantContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x42\n\rGetRewardInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12\x45\n\x10GetBrokerageInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x32\xad\x04\n\x0fWalletExtension\x12\xb1\x01\n\x17GetTransactionsFromThis\x12\x1a.protocol.AccountPaginated\x1a\x19.protocol.TransactionList\"_\x82\xd3\xe4\x93\x02Y\"(/walletextension/gettransactionsfromthis:\x01*Z*\x12(/walletextension/gettransactionsfromthis\x12\\\n\x18GetTransactionsFromThis2\x12\x1a.protocol.AccountPaginated\x1a\".protocol.TransactionListExtention\"\x00\x12\xab\x01\n\x15GetTransactionsToThis\x12\x1a.protocol.AccountPaginated\x1a\x19.protocol.TransactionList\"[\x82\xd3\xe4\x93\x02U\"&/walletextension/gettransactionstothis:\x01*Z(\x12&/walletextension/gettransactionstothis\x12Z\n\x16GetTransactionsToThis2\x12\x1a.protocol.AccountPaginated\x1a\".protocol.TransactionListExtention\"\x00\x32\x99\x02\n\x08\x44\x61tabase\x12G\n\x11getBlockReference\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockReference\"\x00\x12M\n\x14GetDynamicProperties\x12\x16.protocol.EmptyMessage\x1a\x1b.protocol.DynamicProperties\"\x00\x12\x38\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"\x00\x12;\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"\x00\x32\t\n\x07NetworkBA\n\x0corg.tron.apiB\x07GrpcAPIZ(github.com/tronprotocol/grpc-gateway/apib\x06proto3')
+  serialized_pb=_b('\n\rapi/api.proto\x12\x08protocol\x1a\x0f\x63ore/Tron.proto\x1a\x13\x63ore/Contract.proto\x1a\x1cgoogle/api/annotations.proto\"\x94\x03\n\x06Return\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12,\n\x04\x63ode\x18\x02 \x01(\x0e\x32\x1e.protocol.Return.response_code\x12\x0f\n\x07message\x18\x03 \x01(\x0c\"\xba\x02\n\rresponse_code\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0c\n\x08SIGERROR\x10\x01\x12\x1b\n\x17\x43ONTRACT_VALIDATE_ERROR\x10\x02\x12\x16\n\x12\x43ONTRACT_EXE_ERROR\x10\x03\x12\x12\n\x0e\x42\x41NDWITH_ERROR\x10\x04\x12\x19\n\x15\x44UP_TRANSACTION_ERROR\x10\x05\x12\x0f\n\x0bTAPOS_ERROR\x10\x06\x12\x1d\n\x19TOO_BIG_TRANSACTION_ERROR\x10\x07\x12 \n\x1cTRANSACTION_EXPIRATION_ERROR\x10\x08\x12\x0f\n\x0bSERVER_BUSY\x10\t\x12\x11\n\rNO_CONNECTION\x10\n\x12#\n\x1fNOT_ENOUGH_EFFECTIVE_CONNECTION\x10\x0b\x12\x0f\n\x0bOTHER_ERROR\x10\x14\"7\n\x0e\x42lockReference\x12\x11\n\tblock_num\x18\x01 \x01(\x03\x12\x12\n\nblock_hash\x18\x02 \x01(\x0c\"3\n\x0bWitnessList\x12$\n\twitnesses\x18\x01 \x03(\x0b\x32\x11.protocol.Witness\"5\n\x0cProposalList\x12%\n\tproposals\x18\x01 \x03(\x0b\x32\x12.protocol.Proposal\"5\n\x0c\x45xchangeList\x12%\n\texchanges\x18\x01 \x03(\x0b\x32\x12.protocol.Exchange\"B\n\x0e\x41ssetIssueList\x12\x30\n\nassetIssue\x18\x01 \x03(\x0b\x32\x1c.protocol.AssetIssueContract\"+\n\tBlockList\x12\x1e\n\x05\x62lock\x18\x01 \x03(\x0b\x32\x0f.protocol.Block\"=\n\x0fTransactionList\x12*\n\x0btransaction\x18\x01 \x03(\x0b\x32\x15.protocol.Transaction\"B\n\x18\x44\x65legatedResourceMessage\x12\x13\n\x0b\x66romAddress\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\"O\n\x15\x44\x65legatedResourceList\x12\x36\n\x11\x64\x65legatedResource\x18\x01 \x03(\x0b\x32\x1b.protocol.DelegatedResource\")\n\x08NodeList\x12\x1d\n\x05nodes\x18\x01 \x03(\x0b\x32\x0e.protocol.Node\"*\n\x04Node\x12\"\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\x11.protocol.Address\"%\n\x07\x41\x64\x64ress\x12\x0c\n\x04host\x18\x01 \x01(\x0c\x12\x0c\n\x04port\x18\x02 \x01(\x05\"\x0e\n\x0c\x45mptyMessage\"\x1c\n\rNumberMessage\x12\x0b\n\x03num\x18\x01 \x01(\x03\"\x1d\n\x0c\x42ytesMessage\x12\r\n\x05value\x18\x01 \x01(\x0c\"E\n\x0bTimeMessage\x12\x1b\n\x13\x62\x65ginInMilliseconds\x18\x01 \x01(\x03\x12\x19\n\x11\x65ndInMilliseconds\x18\x02 \x01(\x03\".\n\nBlockLimit\x12\x10\n\x08startNum\x18\x01 \x01(\x03\x12\x0e\n\x06\x65ndNum\x18\x02 \x01(\x03\";\n\x10TransactionLimit\x12\x15\n\rtransactionId\x18\x01 \x01(\x0c\x12\x10\n\x08limitNum\x18\x02 \x01(\x03\"U\n\x10\x41\x63\x63ountPaginated\x12\"\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x11.protocol.Account\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\x03\"a\n\x14TimePaginatedMessage\x12*\n\x0btimeMessage\x18\x01 \x01(\x0b\x32\x15.protocol.TimeMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\x03\"\x87\x03\n\x11\x41\x63\x63ountNetMessage\x12\x13\n\x0b\x66reeNetUsed\x18\x01 \x01(\x03\x12\x14\n\x0c\x66reeNetLimit\x18\x02 \x01(\x03\x12\x0f\n\x07NetUsed\x18\x03 \x01(\x03\x12\x10\n\x08NetLimit\x18\x04 \x01(\x03\x12\x43\n\x0c\x61ssetNetUsed\x18\x05 \x03(\x0b\x32-.protocol.AccountNetMessage.AssetNetUsedEntry\x12\x45\n\rassetNetLimit\x18\x06 \x03(\x0b\x32..protocol.AccountNetMessage.AssetNetLimitEntry\x12\x15\n\rTotalNetLimit\x18\x07 \x01(\x03\x12\x16\n\x0eTotalNetWeight\x18\x08 \x01(\x03\x1a\x33\n\x11\x41ssetNetUsedEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\x34\n\x12\x41ssetNetLimitEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"\x9f\x04\n\x16\x41\x63\x63ountResourceMessage\x12\x13\n\x0b\x66reeNetUsed\x18\x01 \x01(\x03\x12\x14\n\x0c\x66reeNetLimit\x18\x02 \x01(\x03\x12\x0f\n\x07NetUsed\x18\x03 \x01(\x03\x12\x10\n\x08NetLimit\x18\x04 \x01(\x03\x12H\n\x0c\x61ssetNetUsed\x18\x05 \x03(\x0b\x32\x32.protocol.AccountResourceMessage.AssetNetUsedEntry\x12J\n\rassetNetLimit\x18\x06 \x03(\x0b\x32\x33.protocol.AccountResourceMessage.AssetNetLimitEntry\x12\x15\n\rTotalNetLimit\x18\x07 \x01(\x03\x12\x16\n\x0eTotalNetWeight\x18\x08 \x01(\x03\x12\x12\n\nEnergyUsed\x18\r \x01(\x03\x12\x13\n\x0b\x45nergyLimit\x18\x0e \x01(\x03\x12\x18\n\x10TotalEnergyLimit\x18\x0f \x01(\x03\x12\x19\n\x11TotalEnergyWeight\x18\x10 \x01(\x03\x12\x13\n\x0bstorageUsed\x18\x15 \x01(\x03\x12\x14\n\x0cstorageLimit\x18\x16 \x01(\x03\x1a\x33\n\x11\x41ssetNetUsedEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\x34\n\x12\x41ssetNetLimitEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"1\n\x10PaginatedMessage\x12\x0e\n\x06offset\x18\x01 \x01(\x03\x12\r\n\x05limit\x18\x02 \x01(\x03\"L\n\x13\x45\x61syTransferMessage\x12\x12\n\npassPhrase\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"b\n\x18\x45\x61syTransferAssetMessage\x12\x12\n\npassPhrase\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"U\n\x1c\x45\x61syTransferByPrivateMessage\x12\x12\n\nprivateKey\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"k\n!EasyTransferAssetByPrivateMessage\x12\x12\n\nprivateKey\x18\x01 \x01(\x0c\x12\x11\n\ttoAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"r\n\x14\x45\x61syTransferResponse\x12*\n\x0btransaction\x18\x01 \x01(\x0b\x32\x15.protocol.Transaction\x12 \n\x06result\x18\x02 \x01(\x0b\x32\x10.protocol.Return\x12\x0c\n\x04txid\x18\x03 \x01(\x0c\">\n\x17\x41\x64\x64ressPrKeyPairMessage\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x12\n\nprivateKey\x18\x02 \x01(\t\"\x8b\x01\n\x14TransactionExtention\x12*\n\x0btransaction\x18\x01 \x01(\x0b\x32\x15.protocol.Transaction\x12\x0c\n\x04txid\x18\x02 \x01(\x0c\x12\x17\n\x0f\x63onstant_result\x18\x03 \x03(\x0c\x12 \n\x06result\x18\x04 \x01(\x0b\x32\x10.protocol.Return\"\x84\x01\n\x0e\x42lockExtention\x12\x34\n\x0ctransactions\x18\x01 \x03(\x0b\x32\x1e.protocol.TransactionExtention\x12+\n\x0c\x62lock_header\x18\x02 \x01(\x0b\x32\x15.protocol.BlockHeader\x12\x0f\n\x07\x62lockid\x18\x03 \x01(\x0c\"=\n\x12\x42lockListExtention\x12\'\n\x05\x62lock\x18\x01 \x03(\x0b\x32\x18.protocol.BlockExtention\"O\n\x18TransactionListExtention\x12\x33\n\x0btransaction\x18\x01 \x03(\x0b\x32\x1e.protocol.TransactionExtention\"a\n\x1a\x42lockIncrementalMerkleTree\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12\x33\n\nmerkleTree\x18\x02 \x01(\x0b\x32\x1f.protocol.IncrementalMerkleTree\"\xdf\x03\n\x15TransactionSignWeight\x12(\n\npermission\x18\x01 \x01(\x0b\x32\x14.protocol.Permission\x12\x15\n\rapproved_list\x18\x02 \x03(\x0c\x12\x16\n\x0e\x63urrent_weight\x18\x03 \x01(\x03\x12\x36\n\x06result\x18\x04 \x01(\x0b\x32&.protocol.TransactionSignWeight.Result\x12\x33\n\x0btransaction\x18\x05 \x01(\x0b\x32\x1e.protocol.TransactionExtention\x1a\xff\x01\n\x06Result\x12\x42\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x34.protocol.TransactionSignWeight.Result.response_code\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x9f\x01\n\rresponse_code\x12\x15\n\x11\x45NOUGH_PERMISSION\x10\x00\x12\x19\n\x15NOT_ENOUGH_PERMISSION\x10\x01\x12\x1a\n\x16SIGNATURE_FORMAT_ERROR\x10\x02\x12\x19\n\x15\x43OMPUTE_ADDRESS_ERROR\x10\x03\x12\x14\n\x10PERMISSION_ERROR\x10\x04\x12\x0f\n\x0bOTHER_ERROR\x10\x14\"\xe7\x02\n\x17TransactionApprovedList\x12\x15\n\rapproved_list\x18\x02 \x03(\x0c\x12\x38\n\x06result\x18\x04 \x01(\x0b\x32(.protocol.TransactionApprovedList.Result\x12\x33\n\x0btransaction\x18\x05 \x01(\x0b\x32\x1e.protocol.TransactionExtention\x1a\xc5\x01\n\x06Result\x12\x44\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x36.protocol.TransactionApprovedList.Result.response_code\x12\x0f\n\x07message\x18\x02 \x01(\t\"d\n\rresponse_code\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16SIGNATURE_FORMAT_ERROR\x10\x01\x12\x19\n\x15\x43OMPUTE_ADDRESS_ERROR\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x14\"W\n\x14IvkDecryptParameters\x12\x19\n\x11start_block_index\x18\x01 \x01(\x03\x12\x17\n\x0f\x65nd_block_index\x18\x02 \x01(\x03\x12\x0b\n\x03ivk\x18\x03 \x01(\x0c\"v\n\x1bIvkDecryptAndMarkParameters\x12\x19\n\x11start_block_index\x18\x01 \x01(\x03\x12\x17\n\x0f\x65nd_block_index\x18\x02 \x01(\x03\x12\x0b\n\x03ivk\x18\x05 \x01(\x0c\x12\n\n\x02\x61k\x18\x03 \x01(\x0c\x12\n\n\x02nk\x18\x04 \x01(\x0c\"W\n\x14OvkDecryptParameters\x12\x19\n\x11start_block_index\x18\x01 \x01(\x03\x12\x17\n\x0f\x65nd_block_index\x18\x02 \x01(\x03\x12\x0b\n\x03ovk\x18\x03 \x01(\x0c\"\x83\x01\n\x0c\x44\x65\x63ryptNotes\x12.\n\x07noteTxs\x18\x01 \x03(\x0b\x32\x1d.protocol.DecryptNotes.NoteTx\x1a\x43\n\x06NoteTx\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.protocol.Note\x12\x0c\n\x04txid\x18\x02 \x01(\x0c\x12\r\n\x05index\x18\x03 \x01(\x05\"\xa1\x01\n\x12\x44\x65\x63ryptNotesMarked\x12\x34\n\x07noteTxs\x18\x01 \x03(\x0b\x32#.protocol.DecryptNotesMarked.NoteTx\x1aU\n\x06NoteTx\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.protocol.Note\x12\x0c\n\x04txid\x18\x02 \x01(\x0c\x12\r\n\x05index\x18\x03 \x01(\x05\x12\x10\n\x08is_spend\x18\x04 \x01(\x08\"I\n\x04Note\x12\r\n\x05value\x18\x01 \x01(\x03\x12\x17\n\x0fpayment_address\x18\x02 \x01(\t\x12\x0b\n\x03rcm\x18\x03 \x01(\x0c\x12\x0c\n\x04memo\x18\x04 \x01(\x0c\"{\n\tSpendNote\x12\x1c\n\x04note\x18\x03 \x01(\x0b\x32\x0e.protocol.Note\x12\r\n\x05\x61lpha\x18\x04 \x01(\x0c\x12\x33\n\x07voucher\x18\x05 \x01(\x0b\x32\".protocol.IncrementalMerkleVoucher\x12\x0c\n\x04path\x18\x06 \x01(\x0c\"+\n\x0bReceiveNote\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.protocol.Note\"\x84\x02\n\x11PrivateParameters\x12 \n\x18transparent_from_address\x18\x01 \x01(\x0c\x12\x0b\n\x03\x61sk\x18\x02 \x01(\x0c\x12\x0b\n\x03nsk\x18\x03 \x01(\x0c\x12\x0b\n\x03ovk\x18\x04 \x01(\x0c\x12\x13\n\x0b\x66rom_amount\x18\x05 \x01(\x03\x12,\n\x0fshielded_spends\x18\x06 \x03(\x0b\x32\x13.protocol.SpendNote\x12\x30\n\x11shielded_receives\x18\x07 \x03(\x0b\x32\x15.protocol.ReceiveNote\x12\x1e\n\x16transparent_to_address\x18\x08 \x01(\x0c\x12\x11\n\tto_amount\x18\t \x01(\x03\"\x8d\x02\n\x1bPrivateParametersWithoutAsk\x12 \n\x18transparent_from_address\x18\x01 \x01(\x0c\x12\n\n\x02\x61k\x18\x02 \x01(\x0c\x12\x0b\n\x03nsk\x18\x03 \x01(\x0c\x12\x0b\n\x03ovk\x18\x04 \x01(\x0c\x12\x13\n\x0b\x66rom_amount\x18\x05 \x01(\x03\x12,\n\x0fshielded_spends\x18\x06 \x03(\x0b\x32\x13.protocol.SpendNote\x12\x30\n\x11shielded_receives\x18\x07 \x03(\x0b\x32\x15.protocol.ReceiveNote\x12\x1e\n\x16transparent_to_address\x18\x08 \x01(\x0c\x12\x11\n\tto_amount\x18\t \x01(\x03\"E\n\x16SpendAuthSigParameters\x12\x0b\n\x03\x61sk\x18\x01 \x01(\x0c\x12\x0f\n\x07tx_hash\x18\x02 \x01(\x0c\x12\r\n\x05\x61lpha\x18\x03 \x01(\x0c\"y\n\x0cNfParameters\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.protocol.Note\x12\x33\n\x07voucher\x18\x02 \x01(\x0b\x32\".protocol.IncrementalMerkleVoucher\x12\n\n\x02\x61k\x18\x03 \x01(\x0c\x12\n\n\x02nk\x18\x04 \x01(\x0c\"C\n\x1a\x45xpandedSpendingKeyMessage\x12\x0b\n\x03\x61sk\x18\x01 \x01(\x0c\x12\x0b\n\x03nsk\x18\x02 \x01(\x0c\x12\x0b\n\x03ovk\x18\x03 \x01(\x0c\"+\n\x11ViewingKeyMessage\x12\n\n\x02\x61k\x18\x01 \x01(\x0c\x12\n\n\x02nk\x18\x02 \x01(\x0c\"(\n\x19IncomingViewingKeyMessage\x12\x0b\n\x03ivk\x18\x01 \x01(\x0c\"\x1f\n\x12\x44iversifierMessage\x12\t\n\x01\x64\x18\x01 \x01(\x0c\"\x81\x01\n$IncomingViewingKeyDiversifierMessage\x12\x30\n\x03ivk\x18\x01 \x01(\x0b\x32#.protocol.IncomingViewingKeyMessage\x12\'\n\x01\x64\x18\x02 \x01(\x0b\x32\x1c.protocol.DiversifierMessage\"f\n\x15PaymentAddressMessage\x12\'\n\x01\x64\x18\x01 \x01(\x0b\x32\x1c.protocol.DiversifierMessage\x12\x0b\n\x03pkD\x18\x02 \x01(\x0c\x12\x17\n\x0fpayment_address\x18\x03 \x01(\t\"\x9e\x01\n\x13ShieldedAddressInfo\x12\n\n\x02sk\x18\x01 \x01(\x0c\x12\x0b\n\x03\x61sk\x18\x02 \x01(\x0c\x12\x0b\n\x03nsk\x18\x03 \x01(\x0c\x12\x0b\n\x03ovk\x18\x04 \x01(\x0c\x12\n\n\x02\x61k\x18\x05 \x01(\x0c\x12\n\n\x02nk\x18\x06 \x01(\x0c\x12\x0b\n\x03ivk\x18\x07 \x01(\x0c\x12\t\n\x01\x64\x18\x08 \x01(\x0c\x12\x0b\n\x03pkD\x18\t \x01(\x0c\x12\x17\n\x0fpayment_address\x18\n \x01(\t\"c\n\x0eNoteParameters\x12\n\n\x02\x61k\x18\x01 \x01(\x0c\x12\n\n\x02nk\x18\x02 \x01(\x0c\x12\x1c\n\x04note\x18\x03 \x01(\x0b\x32\x0e.protocol.Note\x12\x0c\n\x04txid\x18\x04 \x01(\x0c\x12\r\n\x05index\x18\x05 \x01(\x05\".\n\x0bSpendResult\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t2\x95`\n\x06Wallet\x12g\n\nGetAccount\x12\x11.protocol.Account\x1a\x11.protocol.Account\"3\x82\xd3\xe4\x93\x02-\"\x12/wallet/getaccount:\x01*Z\x14\x12\x12/wallet/getaccount\x12s\n\x0eGetAccountById\x12\x11.protocol.Account\x1a\x11.protocol.Account\";\x82\xd3\xe4\x93\x02\x35\"\x16/wallet/getaccountbyid:\x01*Z\x18\x12\x16/wallet/getaccountbyid\x12\x89\x01\n\x11\x43reateTransaction\x12\x1a.protocol.TransferContract\x1a\x15.protocol.Transaction\"A\x82\xd3\xe4\x93\x02;\"\x19/wallet/createtransaction:\x01*Z\x1b\x12\x19/wallet/createtransaction\x12R\n\x12\x43reateTransaction2\x12\x1a.protocol.TransferContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x88\x01\n\x14\x42roadcastTransaction\x12\x15.protocol.Transaction\x1a\x10.protocol.Return\"G\x82\xd3\xe4\x93\x02\x41\"\x1c/wallet/broadcasttransaction:\x01*Z\x1e\x12\x1c/wallet/broadcasttransaction\x12\x82\x01\n\rUpdateAccount\x12\x1f.protocol.AccountUpdateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/updateaccount:\x01*Z\x17\x12\x15/wallet/updateaccount\x12~\n\x0cSetAccountId\x12\x1e.protocol.SetAccountIdContract\x1a\x15.protocol.Transaction\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/setaccountid:\x01*Z\x16\x12\x14/wallet/setaccountid\x12S\n\x0eUpdateAccount2\x12\x1f.protocol.AccountUpdateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8f\x01\n\x12VoteWitnessAccount\x12\x1d.protocol.VoteWitnessContract\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/votewitnessaccount:\x01*Z\x1c\x12\x1a/wallet/votewitnessaccount\x12R\n\rUpdateSetting\x12\x1f.protocol.UpdateSettingContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12Z\n\x11UpdateEnergyLimit\x12#.protocol.UpdateEnergyLimitContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x13VoteWitnessAccount2\x12\x1d.protocol.VoteWitnessContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x88\x01\n\x10\x43reateAssetIssue\x12\x1c.protocol.AssetIssueContract\x1a\x15.protocol.Transaction\"?\x82\xd3\xe4\x93\x02\x39\"\x18/wallet/createassetissue:\x01*Z\x1a\x12\x18/wallet/createassetissue\x12S\n\x11\x43reateAssetIssue2\x12\x1c.protocol.AssetIssueContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rUpdateWitness\x12\x1f.protocol.WitnessUpdateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/updatewitness:\x01*Z\x17\x12\x15/wallet/updatewitness\x12S\n\x0eUpdateWitness2\x12\x1f.protocol.WitnessUpdateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rCreateAccount\x12\x1f.protocol.AccountCreateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createaccount:\x01*Z\x17\x12\x15/wallet/createaccount\x12S\n\x0e\x43reateAccount2\x12\x1f.protocol.AccountCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rCreateWitness\x12\x1f.protocol.WitnessCreateContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createwitness:\x01*Z\x17\x12\x15/wallet/createwitness\x12S\n\x0e\x43reateWitness2\x12\x1f.protocol.WitnessCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rTransferAsset\x12\x1f.protocol.TransferAssetContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/transferasset:\x01*Z\x17\x12\x15/wallet/transferasset\x12S\n\x0eTransferAsset2\x12\x1f.protocol.TransferAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\xa2\x01\n\x15ParticipateAssetIssue\x12\'.protocol.ParticipateAssetIssueContract\x1a\x15.protocol.Transaction\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/wallet/participateassetissue:\x01*Z\x1f\x12\x1d/wallet/participateassetissue\x12\x63\n\x16ParticipateAssetIssue2\x12\'.protocol.ParticipateAssetIssueContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rFreezeBalance\x12\x1f.protocol.FreezeBalanceContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/freezebalance:\x01*Z\x17\x12\x15/wallet/freezebalance\x12S\n\x0e\x46reezeBalance2\x12\x1f.protocol.FreezeBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8a\x01\n\x0fUnfreezeBalance\x12!.protocol.UnfreezeBalanceContract\x1a\x15.protocol.Transaction\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/unfreezebalance:\x01*Z\x19\x12\x17/wallet/unfreezebalance\x12W\n\x10UnfreezeBalance2\x12!.protocol.UnfreezeBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x82\x01\n\rUnfreezeAsset\x12\x1f.protocol.UnfreezeAssetContract\x1a\x15.protocol.Transaction\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/unfreezeasset:\x01*Z\x17\x12\x15/wallet/unfreezeasset\x12S\n\x0eUnfreezeAsset2\x12\x1f.protocol.UnfreezeAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x8a\x01\n\x0fWithdrawBalance\x12!.protocol.WithdrawBalanceContract\x1a\x15.protocol.Transaction\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/withdrawbalance:\x01*Z\x19\x12\x17/wallet/withdrawbalance\x12W\n\x10WithdrawBalance2\x12!.protocol.WithdrawBalanceContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12z\n\x0bUpdateAsset\x12\x1d.protocol.UpdateAssetContract\x1a\x15.protocol.Transaction\"5\x82\xd3\xe4\x93\x02/\"\x13/wallet/updateasset:\x01*Z\x15\x12\x13/wallet/updateasset\x12O\n\x0cUpdateAsset2\x12\x1d.protocol.UpdateAssetContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0eProposalCreate\x12 .protocol.ProposalCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x0fProposalApprove\x12!.protocol.ProposalApproveContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0eProposalDelete\x12 .protocol.ProposalDeleteContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12L\n\nBuyStorage\x12\x1c.protocol.BuyStorageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12V\n\x0f\x42uyStorageBytes\x12!.protocol.BuyStorageBytesContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12N\n\x0bSellStorage\x12\x1d.protocol.SellStorageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0e\x45xchangeCreate\x12 .protocol.ExchangeCreateContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x0e\x45xchangeInject\x12 .protocol.ExchangeInjectContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12X\n\x10\x45xchangeWithdraw\x12\".protocol.ExchangeWithdrawContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12^\n\x13\x45xchangeTransaction\x12%.protocol.ExchangeTransactionContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12j\n\tListNodes\x12\x16.protocol.EmptyMessage\x1a\x12.protocol.NodeList\"1\x82\xd3\xe4\x93\x02+\"\x11/wallet/listnodes:\x01*Z\x13\x12\x11/wallet/listnodes\x12\x92\x01\n\x16GetAssetIssueByAccount\x12\x11.protocol.Account\x1a\x18.protocol.AssetIssueList\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/getassetissuebyaccount:\x01*Z \x12\x1e/wallet/getassetissuebyaccount\x12z\n\rGetAccountNet\x12\x11.protocol.Account\x1a\x1b.protocol.AccountNetMessage\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/getaccountnet:\x01*Z\x17\x12\x15/wallet/getaccountnet\x12K\n\x12GetAccountResource\x12\x11.protocol.Account\x1a .protocol.AccountResourceMessage\"\x00\x12\x92\x01\n\x13GetAssetIssueByName\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getassetissuebyname:\x01*Z\x1d\x12\x1b/wallet/getassetissuebyname\x12M\n\x17GetAssetIssueListByName\x12\x16.protocol.BytesMessage\x1a\x18.protocol.AssetIssueList\"\x00\x12K\n\x11GetAssetIssueById\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12m\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"5\x82\xd3\xe4\x93\x02/\"\x13/wallet/getnowblock:\x01*Z\x15\x12\x13/wallet/getnowblock\x12\x42\n\x0cGetNowBlock2\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockExtention\"\x00\x12t\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/getblockbynum:\x01*Z\x17\x12\x15/wallet/getblockbynum\x12\x45\n\x0eGetBlockByNum2\x12\x17.protocol.NumberMessage\x1a\x18.protocol.BlockExtention\"\x00\x12S\n\x1dGetTransactionCountByBlockNum\x12\x17.protocol.NumberMessage\x1a\x17.protocol.NumberMessage\"\x00\x12p\n\x0cGetBlockById\x12\x16.protocol.BytesMessage\x1a\x0f.protocol.Block\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/getblockbyid:\x01*Z\x16\x12\x14/wallet/getblockbyid\x12\x87\x01\n\x13GetBlockByLimitNext\x12\x14.protocol.BlockLimit\x1a\x13.protocol.BlockList\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getblockbylimitnext:\x01*Z\x1d\x12\x1b/wallet/getblockbylimitnext\x12L\n\x14GetBlockByLimitNext2\x12\x14.protocol.BlockLimit\x1a\x1c.protocol.BlockListExtention\"\x00\x12\x8a\x01\n\x13GetBlockByLatestNum\x12\x17.protocol.NumberMessage\x1a\x13.protocol.BlockList\"E\x82\xd3\xe4\x93\x02?\"\x1b/wallet/getblockbylatestnum:\x01*Z\x1d\x12\x1b/wallet/getblockbylatestnum\x12O\n\x14GetBlockByLatestNum2\x12\x17.protocol.NumberMessage\x1a\x1c.protocol.BlockListExtention\"\x00\x12\x88\x01\n\x12GetTransactionById\x12\x16.protocol.BytesMessage\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/gettransactionbyid:\x01*Z\x1c\x12\x1a/wallet/gettransactionbyid\x12Q\n\x0e\x44\x65ployContract\x12\x1d.protocol.CreateSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12@\n\x0bGetContract\x12\x16.protocol.BytesMessage\x1a\x17.protocol.SmartContract\"\x00\x12S\n\x0fTriggerContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12[\n\x17TriggerConstantContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12P\n\x10\x43learContractABI\x12\x1a.protocol.ClearABIContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12y\n\rListWitnesses\x12\x16.protocol.EmptyMessage\x1a\x15.protocol.WitnessList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listwitnesses:\x01*Z\x17\x12\x15/wallet/listwitnesses\x12]\n\x14GetDelegatedResource\x12\".protocol.DelegatedResourceMessage\x1a\x1f.protocol.DelegatedResourceList\"\x00\x12\x65\n GetDelegatedResourceAccountIndex\x12\x16.protocol.BytesMessage\x1a\'.protocol.DelegatedResourceAccountIndex\"\x00\x12z\n\rListProposals\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ProposalList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listproposals:\x01*Z\x17\x12\x15/wallet/listproposals\x12\x9f\x01\n\x18GetPaginatedProposalList\x12\x1a.protocol.PaginatedMessage\x1a\x16.protocol.ProposalList\"O\x82\xd3\xe4\x93\x02I\" /wallet/getpaginatedproposallist:\x01*Z\"\x12 /wallet/getpaginatedproposallist\x12|\n\x0fGetProposalById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Proposal\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/getproposalbyid:\x01*Z\x19\x12\x17/wallet/getproposalbyid\x12z\n\rListExchanges\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ExchangeList\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/listexchanges:\x01*Z\x17\x12\x15/wallet/listexchanges\x12\x9f\x01\n\x18GetPaginatedExchangeList\x12\x1a.protocol.PaginatedMessage\x1a\x16.protocol.ExchangeList\"O\x82\xd3\xe4\x93\x02I\" /wallet/getpaginatedexchangelist:\x01*Z\"\x12 /wallet/getpaginatedexchangelist\x12|\n\x0fGetExchangeById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Exchange\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/getexchangebyid:\x01*Z\x19\x12\x17/wallet/getexchangebyid\x12\x8c\x01\n\x12GetChainParameters\x12\x16.protocol.EmptyMessage\x1a\x19.protocol.ChainParameters\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/getchainparameters:\x01*Z\x1c\x12\x1a/wallet/getchainparameters\x12\x88\x01\n\x11GetAssetIssueList\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.AssetIssueList\"A\x82\xd3\xe4\x93\x02;\"\x19/wallet/getassetissuelist:\x01*Z\x1b\x12\x19/wallet/getassetissuelist\x12\xa7\x01\n\x1aGetPaginatedAssetIssueList\x12\x1a.protocol.PaginatedMessage\x1a\x18.protocol.AssetIssueList\"S\x82\xd3\xe4\x93\x02M\"\"/wallet/getpaginatedassetissuelist:\x01*Z$\x12\"/wallet/getpaginatedassetissuelist\x12\x84\x01\n\x10TotalTransaction\x12\x16.protocol.EmptyMessage\x1a\x17.protocol.NumberMessage\"?\x82\xd3\xe4\x93\x02\x39\"\x18/wallet/totaltransaction:\x01*Z\x1a\x12\x18/wallet/totaltransaction\x12\x96\x01\n\x16GetNextMaintenanceTime\x12\x16.protocol.EmptyMessage\x1a\x17.protocol.NumberMessage\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/getnextmaintenancetime:\x01*Z \x12\x1e/wallet/getnextmaintenancetime\x12\x8b\x01\n\x12GetTransactionSign\x12\x19.protocol.TransactionSign\x1a\x15.protocol.Transaction\"C\x82\xd3\xe4\x93\x02=\"\x1a/wallet/gettransactionsign:\x01*Z\x1c\x12\x1a/wallet/gettransactionsign\x12R\n\x13GetTransactionSign2\x12\x19.protocol.TransactionSign\x1a\x1e.protocol.TransactionExtention\"\x00\x12z\n\rCreateAddress\x12\x16.protocol.BytesMessage\x1a\x16.protocol.BytesMessage\"9\x82\xd3\xe4\x93\x02\x33\"\x15/wallet/createaddress:\x01*Z\x17\x12\x15/wallet/createaddress\x12Y\n\x11\x45\x61syTransferAsset\x12\".protocol.EasyTransferAssetMessage\x1a\x1e.protocol.EasyTransferResponse\"\x00\x12k\n\x1a\x45\x61syTransferAssetByPrivate\x12+.protocol.EasyTransferAssetByPrivateMessage\x1a\x1e.protocol.EasyTransferResponse\"\x00\x12\x86\x01\n\x0c\x45\x61syTransfer\x12\x1d.protocol.EasyTransferMessage\x1a\x1e.protocol.EasyTransferResponse\"7\x82\xd3\xe4\x93\x02\x31\"\x14/wallet/easytransfer:\x01*Z\x16\x12\x14/wallet/easytransfer\x12\xaa\x01\n\x15\x45\x61syTransferByPrivate\x12&.protocol.EasyTransferByPrivateMessage\x1a\x1e.protocol.EasyTransferResponse\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/wallet/easytransferbyprivate:\x01*Z\x1f\x12\x1d/wallet/easytransferbyprivate\x12\x8b\x01\n\x0fGenerateAddress\x12\x16.protocol.EmptyMessage\x1a!.protocol.AddressPrKeyPairMessage\"=\x82\xd3\xe4\x93\x02\x37\"\x17/wallet/generateaddress:\x01*Z\x19\x12\x17/wallet/generateaddress\x12\x98\x01\n\x16GetTransactionInfoById\x12\x16.protocol.BytesMessage\x1a\x19.protocol.TransactionInfo\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/wallet/gettransactioninfobyid:\x01*Z \x12\x1e/wallet/gettransactioninfobyid\x12\xb3\x01\n\x17\x41\x63\x63ountPermissionUpdate\x12).protocol.AccountPermissionUpdateContract\x1a\x1e.protocol.TransactionExtention\"M\x82\xd3\xe4\x93\x02G\"\x1f/wallet/accountpermissionupdate:\x01*Z!\x12\x1f/wallet/accountpermissionupdate\x12\x46\n\x07\x41\x64\x64Sign\x12\x19.protocol.TransactionSign\x1a\x1e.protocol.TransactionExtention\"\x00\x12T\n\x18GetTransactionSignWeight\x12\x15.protocol.Transaction\x1a\x1f.protocol.TransactionSignWeight\"\x00\x12X\n\x1aGetTransactionApprovedList\x12\x15.protocol.Transaction\x1a!.protocol.TransactionApprovedList\"\x00\x12;\n\x0bGetNodeInfo\x12\x16.protocol.EmptyMessage\x1a\x12.protocol.NodeInfo\"\x00\x12Z\n\x19\x43reateShieldedTransaction\x12\x1b.protocol.PrivateParameters\x1a\x1e.protocol.TransactionExtention\"\x00\x12_\n\x18GetMerkleTreeVoucherInfo\x12\x19.protocol.OutputPointInfo\x1a&.protocol.IncrementalMerkleVoucherInfo\"\x00\x12I\n\rScanNoteByIvk\x12\x1e.protocol.IvkDecryptParameters\x1a\x16.protocol.DecryptNotes\"\x00\x12]\n\x14ScanAndMarkNoteByIvk\x12%.protocol.IvkDecryptAndMarkParameters\x1a\x1c.protocol.DecryptNotesMarked\"\x00\x12I\n\rScanNoteByOvk\x12\x1e.protocol.OvkDecryptParameters\x1a\x16.protocol.DecryptNotes\"\x00\x12\x42\n\x0eGetSpendingKey\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.BytesMessage\"\x00\x12X\n\x16GetExpandedSpendingKey\x12\x16.protocol.BytesMessage\x1a$.protocol.ExpandedSpendingKeyMessage\"\x00\x12@\n\x0cGetAkFromAsk\x12\x16.protocol.BytesMessage\x1a\x16.protocol.BytesMessage\"\x00\x12@\n\x0cGetNkFromNsk\x12\x16.protocol.BytesMessage\x1a\x16.protocol.BytesMessage\"\x00\x12[\n\x15GetIncomingViewingKey\x12\x1b.protocol.ViewingKeyMessage\x1a#.protocol.IncomingViewingKeyMessage\"\x00\x12H\n\x0eGetDiversifier\x12\x16.protocol.EmptyMessage\x1a\x1c.protocol.DiversifierMessage\"\x00\x12P\n\x15GetNewShieldedAddress\x12\x16.protocol.EmptyMessage\x1a\x1d.protocol.ShieldedAddressInfo\"\x00\x12i\n\x14GetZenPaymentAddress\x12..protocol.IncomingViewingKeyDiversifierMessage\x1a\x1f.protocol.PaymentAddressMessage\"\x00\x12:\n\x06GetRcm\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.BytesMessage\"\x00\x12<\n\x07IsSpend\x12\x18.protocol.NoteParameters\x1a\x15.protocol.SpendResult\"\x00\x12w\n,CreateShieldedTransactionWithoutSpendAuthSig\x12%.protocol.PrivateParametersWithoutAsk\x1a\x1e.protocol.TransactionExtention\"\x00\x12K\n\x18GetShieldTransactionHash\x12\x15.protocol.Transaction\x1a\x16.protocol.BytesMessage\"\x00\x12P\n\x12\x43reateSpendAuthSig\x12 .protocol.SpendAuthSigParameters\x1a\x16.protocol.BytesMessage\"\x00\x12I\n\x15\x43reateShieldNullifier\x12\x16.protocol.NfParameters\x1a\x16.protocol.BytesMessage\"\x00\x12\x42\n\rGetRewardInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12\x45\n\x10GetBrokerageInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12V\n\x0fUpdateBrokerage\x12!.protocol.UpdateBrokerageContract\x1a\x1e.protocol.TransactionExtention\"\x00\x32\xeb\x16\n\x0eWalletSolidity\x12w\n\nGetAccount\x12\x11.protocol.Account\x1a\x11.protocol.Account\"C\x82\xd3\xe4\x93\x02=\"\x1a/walletsolidity/getaccount:\x01*Z\x1c\x12\x1a/walletsolidity/getaccount\x12\x83\x01\n\x0eGetAccountById\x12\x11.protocol.Account\x1a\x11.protocol.Account\"K\x82\xd3\xe4\x93\x02\x45\"\x1e/walletsolidity/getaccountbyid:\x01*Z \x12\x1e/walletsolidity/getaccountbyid\x12\x89\x01\n\rListWitnesses\x12\x16.protocol.EmptyMessage\x1a\x15.protocol.WitnessList\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/walletsolidity/listwitnesses:\x01*Z\x1f\x12\x1d/walletsolidity/listwitnesses\x12\x98\x01\n\x11GetAssetIssueList\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.AssetIssueList\"Q\x82\xd3\xe4\x93\x02K\"!/walletsolidity/getassetissuelist:\x01*Z#\x12!/walletsolidity/getassetissuelist\x12\xb7\x01\n\x1aGetPaginatedAssetIssueList\x12\x1a.protocol.PaginatedMessage\x1a\x18.protocol.AssetIssueList\"c\x82\xd3\xe4\x93\x02]\"*/walletsolidity/getpaginatedassetissuelist:\x01*Z,\x12*/walletsolidity/getpaginatedassetissuelist\x12M\n\x13GetAssetIssueByName\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12M\n\x17GetAssetIssueListByName\x12\x16.protocol.BytesMessage\x1a\x18.protocol.AssetIssueList\"\x00\x12K\n\x11GetAssetIssueById\x12\x16.protocol.BytesMessage\x1a\x1c.protocol.AssetIssueContract\"\x00\x12}\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"E\x82\xd3\xe4\x93\x02?\"\x1b/walletsolidity/getnowblock:\x01*Z\x1d\x12\x1b/walletsolidity/getnowblock\x12\x42\n\x0cGetNowBlock2\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockExtention\"\x00\x12\x84\x01\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"I\x82\xd3\xe4\x93\x02\x43\"\x1d/walletsolidity/getblockbynum:\x01*Z\x1f\x12\x1d/walletsolidity/getblockbynum\x12\x45\n\x0eGetBlockByNum2\x12\x17.protocol.NumberMessage\x1a\x18.protocol.BlockExtention\"\x00\x12S\n\x1dGetTransactionCountByBlockNum\x12\x17.protocol.NumberMessage\x1a\x17.protocol.NumberMessage\"\x00\x12]\n\x14GetDelegatedResource\x12\".protocol.DelegatedResourceMessage\x1a\x1f.protocol.DelegatedResourceList\"\x00\x12\x65\n GetDelegatedResourceAccountIndex\x12\x16.protocol.BytesMessage\x1a\'.protocol.DelegatedResourceAccountIndex\"\x00\x12?\n\x0fGetExchangeById\x12\x16.protocol.BytesMessage\x1a\x12.protocol.Exchange\"\x00\x12\x41\n\rListExchanges\x12\x16.protocol.EmptyMessage\x1a\x16.protocol.ExchangeList\"\x00\x12\x98\x01\n\x12GetTransactionById\x12\x16.protocol.BytesMessage\x1a\x15.protocol.Transaction\"S\x82\xd3\xe4\x93\x02M\"\"/walletsolidity/gettransactionbyid:\x01*Z$\x12\"/walletsolidity/gettransactionbyid\x12\xa8\x01\n\x16GetTransactionInfoById\x12\x16.protocol.BytesMessage\x1a\x19.protocol.TransactionInfo\"[\x82\xd3\xe4\x93\x02U\"&/walletsolidity/gettransactioninfobyid:\x01*Z(\x12&/walletsolidity/gettransactioninfobyid\x12\x9b\x01\n\x0fGenerateAddress\x12\x16.protocol.EmptyMessage\x1a!.protocol.AddressPrKeyPairMessage\"M\x82\xd3\xe4\x93\x02G\"\x1f/walletsolidity/generateaddress:\x01*Z!\x12\x1f/walletsolidity/generateaddress\x12_\n\x18GetMerkleTreeVoucherInfo\x12\x19.protocol.OutputPointInfo\x1a&.protocol.IncrementalMerkleVoucherInfo\"\x00\x12I\n\rScanNoteByIvk\x12\x1e.protocol.IvkDecryptParameters\x1a\x16.protocol.DecryptNotes\"\x00\x12]\n\x14ScanAndMarkNoteByIvk\x12%.protocol.IvkDecryptAndMarkParameters\x1a\x1c.protocol.DecryptNotesMarked\"\x00\x12I\n\rScanNoteByOvk\x12\x1e.protocol.OvkDecryptParameters\x1a\x16.protocol.DecryptNotes\"\x00\x12<\n\x07IsSpend\x12\x18.protocol.NoteParameters\x1a\x15.protocol.SpendResult\"\x00\x12[\n\x17TriggerConstantContract\x12\x1e.protocol.TriggerSmartContract\x1a\x1e.protocol.TransactionExtention\"\x00\x12\x42\n\rGetRewardInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x12\x45\n\x10GetBrokerageInfo\x12\x16.protocol.BytesMessage\x1a\x17.protocol.NumberMessage\"\x00\x32\xad\x04\n\x0fWalletExtension\x12\xb1\x01\n\x17GetTransactionsFromThis\x12\x1a.protocol.AccountPaginated\x1a\x19.protocol.TransactionList\"_\x82\xd3\xe4\x93\x02Y\"(/walletextension/gettransactionsfromthis:\x01*Z*\x12(/walletextension/gettransactionsfromthis\x12\\\n\x18GetTransactionsFromThis2\x12\x1a.protocol.AccountPaginated\x1a\".protocol.TransactionListExtention\"\x00\x12\xab\x01\n\x15GetTransactionsToThis\x12\x1a.protocol.AccountPaginated\x1a\x19.protocol.TransactionList\"[\x82\xd3\xe4\x93\x02U\"&/walletextension/gettransactionstothis:\x01*Z(\x12&/walletextension/gettransactionstothis\x12Z\n\x16GetTransactionsToThis2\x12\x1a.protocol.AccountPaginated\x1a\".protocol.TransactionListExtention\"\x00\x32\x99\x02\n\x08\x44\x61tabase\x12G\n\x11getBlockReference\x12\x16.protocol.EmptyMessage\x1a\x18.protocol.BlockReference\"\x00\x12M\n\x14GetDynamicProperties\x12\x16.protocol.EmptyMessage\x1a\x1b.protocol.DynamicProperties\"\x00\x12\x38\n\x0bGetNowBlock\x12\x16.protocol.EmptyMessage\x1a\x0f.protocol.Block\"\x00\x12;\n\rGetBlockByNum\x12\x17.protocol.NumberMessage\x1a\x0f.protocol.Block\"\x00\x32\t\n\x07NetworkBA\n\x0corg.tron.apiB\x07GrpcAPIZ(github.com/tronprotocol/grpc-gateway/apib\x06proto3')
   ,
   dependencies=[core_dot_Tron__pb2.DESCRIPTOR,core_dot_Contract__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -128,8 +128,8 @@ _TRANSACTIONSIGNWEIGHT_RESULT_RESPONSE_CODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3903,
-  serialized_end=4062,
+  serialized_start=4002,
+  serialized_end=4161,
 )
 _sym_db.RegisterEnumDescriptor(_TRANSACTIONSIGNWEIGHT_RESULT_RESPONSE_CODE)
 
@@ -158,8 +158,8 @@ _TRANSACTIONAPPROVEDLIST_RESULT_RESPONSE_CODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4324,
-  serialized_end=4424,
+  serialized_start=4423,
+  serialized_end=4523,
 )
 _sym_db.RegisterEnumDescriptor(_TRANSACTIONAPPROVEDLIST_RESULT_RESPONSE_CODE)
 
@@ -1717,6 +1717,44 @@ _TRANSACTIONLISTEXTENTION = _descriptor.Descriptor(
 )
 
 
+_BLOCKINCREMENTALMERKLETREE = _descriptor.Descriptor(
+  name='BlockIncrementalMerkleTree',
+  full_name='protocol.BlockIncrementalMerkleTree',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='number', full_name='protocol.BlockIncrementalMerkleTree.number', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='merkleTree', full_name='protocol.BlockIncrementalMerkleTree.merkleTree', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3582,
+  serialized_end=3679,
+)
+
+
 _TRANSACTIONSIGNWEIGHT_RESULT = _descriptor.Descriptor(
   name='Result',
   full_name='protocol.TransactionSignWeight.Result',
@@ -1751,8 +1789,8 @@ _TRANSACTIONSIGNWEIGHT_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3807,
-  serialized_end=4062,
+  serialized_start=3906,
+  serialized_end=4161,
 )
 
 _TRANSACTIONSIGNWEIGHT = _descriptor.Descriptor(
@@ -1809,8 +1847,8 @@ _TRANSACTIONSIGNWEIGHT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3583,
-  serialized_end=4062,
+  serialized_start=3682,
+  serialized_end=4161,
 )
 
 
@@ -1848,8 +1886,8 @@ _TRANSACTIONAPPROVEDLIST_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4227,
-  serialized_end=4424,
+  serialized_start=4326,
+  serialized_end=4523,
 )
 
 _TRANSACTIONAPPROVEDLIST = _descriptor.Descriptor(
@@ -1892,8 +1930,1139 @@ _TRANSACTIONAPPROVEDLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4065,
-  serialized_end=4424,
+  serialized_start=4164,
+  serialized_end=4523,
+)
+
+
+_IVKDECRYPTPARAMETERS = _descriptor.Descriptor(
+  name='IvkDecryptParameters',
+  full_name='protocol.IvkDecryptParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start_block_index', full_name='protocol.IvkDecryptParameters.start_block_index', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end_block_index', full_name='protocol.IvkDecryptParameters.end_block_index', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ivk', full_name='protocol.IvkDecryptParameters.ivk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4525,
+  serialized_end=4612,
+)
+
+
+_IVKDECRYPTANDMARKPARAMETERS = _descriptor.Descriptor(
+  name='IvkDecryptAndMarkParameters',
+  full_name='protocol.IvkDecryptAndMarkParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start_block_index', full_name='protocol.IvkDecryptAndMarkParameters.start_block_index', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end_block_index', full_name='protocol.IvkDecryptAndMarkParameters.end_block_index', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ivk', full_name='protocol.IvkDecryptAndMarkParameters.ivk', index=2,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.IvkDecryptAndMarkParameters.ak', index=3,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nk', full_name='protocol.IvkDecryptAndMarkParameters.nk', index=4,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4614,
+  serialized_end=4732,
+)
+
+
+_OVKDECRYPTPARAMETERS = _descriptor.Descriptor(
+  name='OvkDecryptParameters',
+  full_name='protocol.OvkDecryptParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start_block_index', full_name='protocol.OvkDecryptParameters.start_block_index', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end_block_index', full_name='protocol.OvkDecryptParameters.end_block_index', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ovk', full_name='protocol.OvkDecryptParameters.ovk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4734,
+  serialized_end=4821,
+)
+
+
+_DECRYPTNOTES_NOTETX = _descriptor.Descriptor(
+  name='NoteTx',
+  full_name='protocol.DecryptNotes.NoteTx',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.DecryptNotes.NoteTx.note', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='txid', full_name='protocol.DecryptNotes.NoteTx.txid', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='index', full_name='protocol.DecryptNotes.NoteTx.index', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4888,
+  serialized_end=4955,
+)
+
+_DECRYPTNOTES = _descriptor.Descriptor(
+  name='DecryptNotes',
+  full_name='protocol.DecryptNotes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='noteTxs', full_name='protocol.DecryptNotes.noteTxs', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_DECRYPTNOTES_NOTETX, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4824,
+  serialized_end=4955,
+)
+
+
+_DECRYPTNOTESMARKED_NOTETX = _descriptor.Descriptor(
+  name='NoteTx',
+  full_name='protocol.DecryptNotesMarked.NoteTx',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.DecryptNotesMarked.NoteTx.note', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='txid', full_name='protocol.DecryptNotesMarked.NoteTx.txid', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='index', full_name='protocol.DecryptNotesMarked.NoteTx.index', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_spend', full_name='protocol.DecryptNotesMarked.NoteTx.is_spend', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5034,
+  serialized_end=5119,
+)
+
+_DECRYPTNOTESMARKED = _descriptor.Descriptor(
+  name='DecryptNotesMarked',
+  full_name='protocol.DecryptNotesMarked',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='noteTxs', full_name='protocol.DecryptNotesMarked.noteTxs', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_DECRYPTNOTESMARKED_NOTETX, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4958,
+  serialized_end=5119,
+)
+
+
+_NOTE = _descriptor.Descriptor(
+  name='Note',
+  full_name='protocol.Note',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='protocol.Note.value', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_address', full_name='protocol.Note.payment_address', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rcm', full_name='protocol.Note.rcm', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='memo', full_name='protocol.Note.memo', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5121,
+  serialized_end=5194,
+)
+
+
+_SPENDNOTE = _descriptor.Descriptor(
+  name='SpendNote',
+  full_name='protocol.SpendNote',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.SpendNote.note', index=0,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='alpha', full_name='protocol.SpendNote.alpha', index=1,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='voucher', full_name='protocol.SpendNote.voucher', index=2,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='path', full_name='protocol.SpendNote.path', index=3,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5196,
+  serialized_end=5319,
+)
+
+
+_RECEIVENOTE = _descriptor.Descriptor(
+  name='ReceiveNote',
+  full_name='protocol.ReceiveNote',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.ReceiveNote.note', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5321,
+  serialized_end=5364,
+)
+
+
+_PRIVATEPARAMETERS = _descriptor.Descriptor(
+  name='PrivateParameters',
+  full_name='protocol.PrivateParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='transparent_from_address', full_name='protocol.PrivateParameters.transparent_from_address', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ask', full_name='protocol.PrivateParameters.ask', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nsk', full_name='protocol.PrivateParameters.nsk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ovk', full_name='protocol.PrivateParameters.ovk', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='from_amount', full_name='protocol.PrivateParameters.from_amount', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='shielded_spends', full_name='protocol.PrivateParameters.shielded_spends', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='shielded_receives', full_name='protocol.PrivateParameters.shielded_receives', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='transparent_to_address', full_name='protocol.PrivateParameters.transparent_to_address', index=7,
+      number=8, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='to_amount', full_name='protocol.PrivateParameters.to_amount', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5367,
+  serialized_end=5627,
+)
+
+
+_PRIVATEPARAMETERSWITHOUTASK = _descriptor.Descriptor(
+  name='PrivateParametersWithoutAsk',
+  full_name='protocol.PrivateParametersWithoutAsk',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='transparent_from_address', full_name='protocol.PrivateParametersWithoutAsk.transparent_from_address', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.PrivateParametersWithoutAsk.ak', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nsk', full_name='protocol.PrivateParametersWithoutAsk.nsk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ovk', full_name='protocol.PrivateParametersWithoutAsk.ovk', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='from_amount', full_name='protocol.PrivateParametersWithoutAsk.from_amount', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='shielded_spends', full_name='protocol.PrivateParametersWithoutAsk.shielded_spends', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='shielded_receives', full_name='protocol.PrivateParametersWithoutAsk.shielded_receives', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='transparent_to_address', full_name='protocol.PrivateParametersWithoutAsk.transparent_to_address', index=7,
+      number=8, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='to_amount', full_name='protocol.PrivateParametersWithoutAsk.to_amount', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5630,
+  serialized_end=5899,
+)
+
+
+_SPENDAUTHSIGPARAMETERS = _descriptor.Descriptor(
+  name='SpendAuthSigParameters',
+  full_name='protocol.SpendAuthSigParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ask', full_name='protocol.SpendAuthSigParameters.ask', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tx_hash', full_name='protocol.SpendAuthSigParameters.tx_hash', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='alpha', full_name='protocol.SpendAuthSigParameters.alpha', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5901,
+  serialized_end=5970,
+)
+
+
+_NFPARAMETERS = _descriptor.Descriptor(
+  name='NfParameters',
+  full_name='protocol.NfParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.NfParameters.note', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='voucher', full_name='protocol.NfParameters.voucher', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.NfParameters.ak', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nk', full_name='protocol.NfParameters.nk', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5972,
+  serialized_end=6093,
+)
+
+
+_EXPANDEDSPENDINGKEYMESSAGE = _descriptor.Descriptor(
+  name='ExpandedSpendingKeyMessage',
+  full_name='protocol.ExpandedSpendingKeyMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ask', full_name='protocol.ExpandedSpendingKeyMessage.ask', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nsk', full_name='protocol.ExpandedSpendingKeyMessage.nsk', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ovk', full_name='protocol.ExpandedSpendingKeyMessage.ovk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6095,
+  serialized_end=6162,
+)
+
+
+_VIEWINGKEYMESSAGE = _descriptor.Descriptor(
+  name='ViewingKeyMessage',
+  full_name='protocol.ViewingKeyMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.ViewingKeyMessage.ak', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nk', full_name='protocol.ViewingKeyMessage.nk', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6164,
+  serialized_end=6207,
+)
+
+
+_INCOMINGVIEWINGKEYMESSAGE = _descriptor.Descriptor(
+  name='IncomingViewingKeyMessage',
+  full_name='protocol.IncomingViewingKeyMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ivk', full_name='protocol.IncomingViewingKeyMessage.ivk', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6209,
+  serialized_end=6249,
+)
+
+
+_DIVERSIFIERMESSAGE = _descriptor.Descriptor(
+  name='DiversifierMessage',
+  full_name='protocol.DiversifierMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='d', full_name='protocol.DiversifierMessage.d', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6251,
+  serialized_end=6282,
+)
+
+
+_INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE = _descriptor.Descriptor(
+  name='IncomingViewingKeyDiversifierMessage',
+  full_name='protocol.IncomingViewingKeyDiversifierMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ivk', full_name='protocol.IncomingViewingKeyDiversifierMessage.ivk', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='d', full_name='protocol.IncomingViewingKeyDiversifierMessage.d', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6285,
+  serialized_end=6414,
+)
+
+
+_PAYMENTADDRESSMESSAGE = _descriptor.Descriptor(
+  name='PaymentAddressMessage',
+  full_name='protocol.PaymentAddressMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='d', full_name='protocol.PaymentAddressMessage.d', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pkD', full_name='protocol.PaymentAddressMessage.pkD', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_address', full_name='protocol.PaymentAddressMessage.payment_address', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6416,
+  serialized_end=6518,
+)
+
+
+_SHIELDEDADDRESSINFO = _descriptor.Descriptor(
+  name='ShieldedAddressInfo',
+  full_name='protocol.ShieldedAddressInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sk', full_name='protocol.ShieldedAddressInfo.sk', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ask', full_name='protocol.ShieldedAddressInfo.ask', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nsk', full_name='protocol.ShieldedAddressInfo.nsk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ovk', full_name='protocol.ShieldedAddressInfo.ovk', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.ShieldedAddressInfo.ak', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nk', full_name='protocol.ShieldedAddressInfo.nk', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ivk', full_name='protocol.ShieldedAddressInfo.ivk', index=6,
+      number=7, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='d', full_name='protocol.ShieldedAddressInfo.d', index=7,
+      number=8, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pkD', full_name='protocol.ShieldedAddressInfo.pkD', index=8,
+      number=9, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_address', full_name='protocol.ShieldedAddressInfo.payment_address', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6521,
+  serialized_end=6679,
+)
+
+
+_NOTEPARAMETERS = _descriptor.Descriptor(
+  name='NoteParameters',
+  full_name='protocol.NoteParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ak', full_name='protocol.NoteParameters.ak', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nk', full_name='protocol.NoteParameters.nk', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='note', full_name='protocol.NoteParameters.note', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='txid', full_name='protocol.NoteParameters.txid', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='index', full_name='protocol.NoteParameters.index', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6681,
+  serialized_end=6780,
+)
+
+
+_SPENDRESULT = _descriptor.Descriptor(
+  name='SpendResult',
+  full_name='protocol.SpendResult',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='protocol.SpendResult.result', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='protocol.SpendResult.message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6782,
+  serialized_end=6828,
 )
 
 _RETURN.fields_by_name['code'].enum_type = _RETURN_RESPONSE_CODE
@@ -1925,6 +3094,7 @@ _BLOCKEXTENTION.fields_by_name['transactions'].message_type = _TRANSACTIONEXTENT
 _BLOCKEXTENTION.fields_by_name['block_header'].message_type = core_dot_Tron__pb2._BLOCKHEADER
 _BLOCKLISTEXTENTION.fields_by_name['block'].message_type = _BLOCKEXTENTION
 _TRANSACTIONLISTEXTENTION.fields_by_name['transaction'].message_type = _TRANSACTIONEXTENTION
+_BLOCKINCREMENTALMERKLETREE.fields_by_name['merkleTree'].message_type = core_dot_Contract__pb2._INCREMENTALMERKLETREE
 _TRANSACTIONSIGNWEIGHT_RESULT.fields_by_name['code'].enum_type = _TRANSACTIONSIGNWEIGHT_RESULT_RESPONSE_CODE
 _TRANSACTIONSIGNWEIGHT_RESULT.containing_type = _TRANSACTIONSIGNWEIGHT
 _TRANSACTIONSIGNWEIGHT_RESULT_RESPONSE_CODE.containing_type = _TRANSACTIONSIGNWEIGHT_RESULT
@@ -1936,6 +3106,25 @@ _TRANSACTIONAPPROVEDLIST_RESULT.containing_type = _TRANSACTIONAPPROVEDLIST
 _TRANSACTIONAPPROVEDLIST_RESULT_RESPONSE_CODE.containing_type = _TRANSACTIONAPPROVEDLIST_RESULT
 _TRANSACTIONAPPROVEDLIST.fields_by_name['result'].message_type = _TRANSACTIONAPPROVEDLIST_RESULT
 _TRANSACTIONAPPROVEDLIST.fields_by_name['transaction'].message_type = _TRANSACTIONEXTENTION
+_DECRYPTNOTES_NOTETX.fields_by_name['note'].message_type = _NOTE
+_DECRYPTNOTES_NOTETX.containing_type = _DECRYPTNOTES
+_DECRYPTNOTES.fields_by_name['noteTxs'].message_type = _DECRYPTNOTES_NOTETX
+_DECRYPTNOTESMARKED_NOTETX.fields_by_name['note'].message_type = _NOTE
+_DECRYPTNOTESMARKED_NOTETX.containing_type = _DECRYPTNOTESMARKED
+_DECRYPTNOTESMARKED.fields_by_name['noteTxs'].message_type = _DECRYPTNOTESMARKED_NOTETX
+_SPENDNOTE.fields_by_name['note'].message_type = _NOTE
+_SPENDNOTE.fields_by_name['voucher'].message_type = core_dot_Contract__pb2._INCREMENTALMERKLEVOUCHER
+_RECEIVENOTE.fields_by_name['note'].message_type = _NOTE
+_PRIVATEPARAMETERS.fields_by_name['shielded_spends'].message_type = _SPENDNOTE
+_PRIVATEPARAMETERS.fields_by_name['shielded_receives'].message_type = _RECEIVENOTE
+_PRIVATEPARAMETERSWITHOUTASK.fields_by_name['shielded_spends'].message_type = _SPENDNOTE
+_PRIVATEPARAMETERSWITHOUTASK.fields_by_name['shielded_receives'].message_type = _RECEIVENOTE
+_NFPARAMETERS.fields_by_name['note'].message_type = _NOTE
+_NFPARAMETERS.fields_by_name['voucher'].message_type = core_dot_Contract__pb2._INCREMENTALMERKLEVOUCHER
+_INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE.fields_by_name['ivk'].message_type = _INCOMINGVIEWINGKEYMESSAGE
+_INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE.fields_by_name['d'].message_type = _DIVERSIFIERMESSAGE
+_PAYMENTADDRESSMESSAGE.fields_by_name['d'].message_type = _DIVERSIFIERMESSAGE
+_NOTEPARAMETERS.fields_by_name['note'].message_type = _NOTE
 DESCRIPTOR.message_types_by_name['Return'] = _RETURN
 DESCRIPTOR.message_types_by_name['BlockReference'] = _BLOCKREFERENCE
 DESCRIPTOR.message_types_by_name['WitnessList'] = _WITNESSLIST
@@ -1970,8 +3159,30 @@ DESCRIPTOR.message_types_by_name['TransactionExtention'] = _TRANSACTIONEXTENTION
 DESCRIPTOR.message_types_by_name['BlockExtention'] = _BLOCKEXTENTION
 DESCRIPTOR.message_types_by_name['BlockListExtention'] = _BLOCKLISTEXTENTION
 DESCRIPTOR.message_types_by_name['TransactionListExtention'] = _TRANSACTIONLISTEXTENTION
+DESCRIPTOR.message_types_by_name['BlockIncrementalMerkleTree'] = _BLOCKINCREMENTALMERKLETREE
 DESCRIPTOR.message_types_by_name['TransactionSignWeight'] = _TRANSACTIONSIGNWEIGHT
 DESCRIPTOR.message_types_by_name['TransactionApprovedList'] = _TRANSACTIONAPPROVEDLIST
+DESCRIPTOR.message_types_by_name['IvkDecryptParameters'] = _IVKDECRYPTPARAMETERS
+DESCRIPTOR.message_types_by_name['IvkDecryptAndMarkParameters'] = _IVKDECRYPTANDMARKPARAMETERS
+DESCRIPTOR.message_types_by_name['OvkDecryptParameters'] = _OVKDECRYPTPARAMETERS
+DESCRIPTOR.message_types_by_name['DecryptNotes'] = _DECRYPTNOTES
+DESCRIPTOR.message_types_by_name['DecryptNotesMarked'] = _DECRYPTNOTESMARKED
+DESCRIPTOR.message_types_by_name['Note'] = _NOTE
+DESCRIPTOR.message_types_by_name['SpendNote'] = _SPENDNOTE
+DESCRIPTOR.message_types_by_name['ReceiveNote'] = _RECEIVENOTE
+DESCRIPTOR.message_types_by_name['PrivateParameters'] = _PRIVATEPARAMETERS
+DESCRIPTOR.message_types_by_name['PrivateParametersWithoutAsk'] = _PRIVATEPARAMETERSWITHOUTASK
+DESCRIPTOR.message_types_by_name['SpendAuthSigParameters'] = _SPENDAUTHSIGPARAMETERS
+DESCRIPTOR.message_types_by_name['NfParameters'] = _NFPARAMETERS
+DESCRIPTOR.message_types_by_name['ExpandedSpendingKeyMessage'] = _EXPANDEDSPENDINGKEYMESSAGE
+DESCRIPTOR.message_types_by_name['ViewingKeyMessage'] = _VIEWINGKEYMESSAGE
+DESCRIPTOR.message_types_by_name['IncomingViewingKeyMessage'] = _INCOMINGVIEWINGKEYMESSAGE
+DESCRIPTOR.message_types_by_name['DiversifierMessage'] = _DIVERSIFIERMESSAGE
+DESCRIPTOR.message_types_by_name['IncomingViewingKeyDiversifierMessage'] = _INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE
+DESCRIPTOR.message_types_by_name['PaymentAddressMessage'] = _PAYMENTADDRESSMESSAGE
+DESCRIPTOR.message_types_by_name['ShieldedAddressInfo'] = _SHIELDEDADDRESSINFO
+DESCRIPTOR.message_types_by_name['NoteParameters'] = _NOTEPARAMETERS
+DESCRIPTOR.message_types_by_name['SpendResult'] = _SPENDRESULT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Return = _reflection.GeneratedProtocolMessageType('Return', (_message.Message,), {
@@ -2244,6 +3455,13 @@ TransactionListExtention = _reflection.GeneratedProtocolMessageType('Transaction
   })
 _sym_db.RegisterMessage(TransactionListExtention)
 
+BlockIncrementalMerkleTree = _reflection.GeneratedProtocolMessageType('BlockIncrementalMerkleTree', (_message.Message,), {
+  'DESCRIPTOR' : _BLOCKINCREMENTALMERKLETREE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.BlockIncrementalMerkleTree)
+  })
+_sym_db.RegisterMessage(BlockIncrementalMerkleTree)
+
 TransactionSignWeight = _reflection.GeneratedProtocolMessageType('TransactionSignWeight', (_message.Message,), {
 
   'Result' : _reflection.GeneratedProtocolMessageType('Result', (_message.Message,), {
@@ -2274,6 +3492,169 @@ TransactionApprovedList = _reflection.GeneratedProtocolMessageType('TransactionA
 _sym_db.RegisterMessage(TransactionApprovedList)
 _sym_db.RegisterMessage(TransactionApprovedList.Result)
 
+IvkDecryptParameters = _reflection.GeneratedProtocolMessageType('IvkDecryptParameters', (_message.Message,), {
+  'DESCRIPTOR' : _IVKDECRYPTPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IvkDecryptParameters)
+  })
+_sym_db.RegisterMessage(IvkDecryptParameters)
+
+IvkDecryptAndMarkParameters = _reflection.GeneratedProtocolMessageType('IvkDecryptAndMarkParameters', (_message.Message,), {
+  'DESCRIPTOR' : _IVKDECRYPTANDMARKPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IvkDecryptAndMarkParameters)
+  })
+_sym_db.RegisterMessage(IvkDecryptAndMarkParameters)
+
+OvkDecryptParameters = _reflection.GeneratedProtocolMessageType('OvkDecryptParameters', (_message.Message,), {
+  'DESCRIPTOR' : _OVKDECRYPTPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.OvkDecryptParameters)
+  })
+_sym_db.RegisterMessage(OvkDecryptParameters)
+
+DecryptNotes = _reflection.GeneratedProtocolMessageType('DecryptNotes', (_message.Message,), {
+
+  'NoteTx' : _reflection.GeneratedProtocolMessageType('NoteTx', (_message.Message,), {
+    'DESCRIPTOR' : _DECRYPTNOTES_NOTETX,
+    '__module__' : 'api.api_pb2'
+    # @@protoc_insertion_point(class_scope:protocol.DecryptNotes.NoteTx)
+    })
+  ,
+  'DESCRIPTOR' : _DECRYPTNOTES,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.DecryptNotes)
+  })
+_sym_db.RegisterMessage(DecryptNotes)
+_sym_db.RegisterMessage(DecryptNotes.NoteTx)
+
+DecryptNotesMarked = _reflection.GeneratedProtocolMessageType('DecryptNotesMarked', (_message.Message,), {
+
+  'NoteTx' : _reflection.GeneratedProtocolMessageType('NoteTx', (_message.Message,), {
+    'DESCRIPTOR' : _DECRYPTNOTESMARKED_NOTETX,
+    '__module__' : 'api.api_pb2'
+    # @@protoc_insertion_point(class_scope:protocol.DecryptNotesMarked.NoteTx)
+    })
+  ,
+  'DESCRIPTOR' : _DECRYPTNOTESMARKED,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.DecryptNotesMarked)
+  })
+_sym_db.RegisterMessage(DecryptNotesMarked)
+_sym_db.RegisterMessage(DecryptNotesMarked.NoteTx)
+
+Note = _reflection.GeneratedProtocolMessageType('Note', (_message.Message,), {
+  'DESCRIPTOR' : _NOTE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.Note)
+  })
+_sym_db.RegisterMessage(Note)
+
+SpendNote = _reflection.GeneratedProtocolMessageType('SpendNote', (_message.Message,), {
+  'DESCRIPTOR' : _SPENDNOTE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.SpendNote)
+  })
+_sym_db.RegisterMessage(SpendNote)
+
+ReceiveNote = _reflection.GeneratedProtocolMessageType('ReceiveNote', (_message.Message,), {
+  'DESCRIPTOR' : _RECEIVENOTE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ReceiveNote)
+  })
+_sym_db.RegisterMessage(ReceiveNote)
+
+PrivateParameters = _reflection.GeneratedProtocolMessageType('PrivateParameters', (_message.Message,), {
+  'DESCRIPTOR' : _PRIVATEPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.PrivateParameters)
+  })
+_sym_db.RegisterMessage(PrivateParameters)
+
+PrivateParametersWithoutAsk = _reflection.GeneratedProtocolMessageType('PrivateParametersWithoutAsk', (_message.Message,), {
+  'DESCRIPTOR' : _PRIVATEPARAMETERSWITHOUTASK,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.PrivateParametersWithoutAsk)
+  })
+_sym_db.RegisterMessage(PrivateParametersWithoutAsk)
+
+SpendAuthSigParameters = _reflection.GeneratedProtocolMessageType('SpendAuthSigParameters', (_message.Message,), {
+  'DESCRIPTOR' : _SPENDAUTHSIGPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.SpendAuthSigParameters)
+  })
+_sym_db.RegisterMessage(SpendAuthSigParameters)
+
+NfParameters = _reflection.GeneratedProtocolMessageType('NfParameters', (_message.Message,), {
+  'DESCRIPTOR' : _NFPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.NfParameters)
+  })
+_sym_db.RegisterMessage(NfParameters)
+
+ExpandedSpendingKeyMessage = _reflection.GeneratedProtocolMessageType('ExpandedSpendingKeyMessage', (_message.Message,), {
+  'DESCRIPTOR' : _EXPANDEDSPENDINGKEYMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ExpandedSpendingKeyMessage)
+  })
+_sym_db.RegisterMessage(ExpandedSpendingKeyMessage)
+
+ViewingKeyMessage = _reflection.GeneratedProtocolMessageType('ViewingKeyMessage', (_message.Message,), {
+  'DESCRIPTOR' : _VIEWINGKEYMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ViewingKeyMessage)
+  })
+_sym_db.RegisterMessage(ViewingKeyMessage)
+
+IncomingViewingKeyMessage = _reflection.GeneratedProtocolMessageType('IncomingViewingKeyMessage', (_message.Message,), {
+  'DESCRIPTOR' : _INCOMINGVIEWINGKEYMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IncomingViewingKeyMessage)
+  })
+_sym_db.RegisterMessage(IncomingViewingKeyMessage)
+
+DiversifierMessage = _reflection.GeneratedProtocolMessageType('DiversifierMessage', (_message.Message,), {
+  'DESCRIPTOR' : _DIVERSIFIERMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.DiversifierMessage)
+  })
+_sym_db.RegisterMessage(DiversifierMessage)
+
+IncomingViewingKeyDiversifierMessage = _reflection.GeneratedProtocolMessageType('IncomingViewingKeyDiversifierMessage', (_message.Message,), {
+  'DESCRIPTOR' : _INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IncomingViewingKeyDiversifierMessage)
+  })
+_sym_db.RegisterMessage(IncomingViewingKeyDiversifierMessage)
+
+PaymentAddressMessage = _reflection.GeneratedProtocolMessageType('PaymentAddressMessage', (_message.Message,), {
+  'DESCRIPTOR' : _PAYMENTADDRESSMESSAGE,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.PaymentAddressMessage)
+  })
+_sym_db.RegisterMessage(PaymentAddressMessage)
+
+ShieldedAddressInfo = _reflection.GeneratedProtocolMessageType('ShieldedAddressInfo', (_message.Message,), {
+  'DESCRIPTOR' : _SHIELDEDADDRESSINFO,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ShieldedAddressInfo)
+  })
+_sym_db.RegisterMessage(ShieldedAddressInfo)
+
+NoteParameters = _reflection.GeneratedProtocolMessageType('NoteParameters', (_message.Message,), {
+  'DESCRIPTOR' : _NOTEPARAMETERS,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.NoteParameters)
+  })
+_sym_db.RegisterMessage(NoteParameters)
+
+SpendResult = _reflection.GeneratedProtocolMessageType('SpendResult', (_message.Message,), {
+  'DESCRIPTOR' : _SPENDRESULT,
+  '__module__' : 'api.api_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.SpendResult)
+  })
+_sym_db.RegisterMessage(SpendResult)
+
 
 DESCRIPTOR._options = None
 _ACCOUNTNETMESSAGE_ASSETNETUSEDENTRY._options = None
@@ -2287,8 +3668,8 @@ _WALLET = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=4427,
-  serialized_end=15179,
+  serialized_start=6831,
+  serialized_end=19140,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAccount',
@@ -3146,9 +4527,180 @@ _WALLET = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
+    name='CreateShieldedTransaction',
+    full_name='protocol.Wallet.CreateShieldedTransaction',
+    index=95,
+    containing_service=None,
+    input_type=_PRIVATEPARAMETERS,
+    output_type=_TRANSACTIONEXTENTION,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetMerkleTreeVoucherInfo',
+    full_name='protocol.Wallet.GetMerkleTreeVoucherInfo',
+    index=96,
+    containing_service=None,
+    input_type=core_dot_Contract__pb2._OUTPUTPOINTINFO,
+    output_type=core_dot_Contract__pb2._INCREMENTALMERKLEVOUCHERINFO,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanNoteByIvk',
+    full_name='protocol.Wallet.ScanNoteByIvk',
+    index=97,
+    containing_service=None,
+    input_type=_IVKDECRYPTPARAMETERS,
+    output_type=_DECRYPTNOTES,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanAndMarkNoteByIvk',
+    full_name='protocol.Wallet.ScanAndMarkNoteByIvk',
+    index=98,
+    containing_service=None,
+    input_type=_IVKDECRYPTANDMARKPARAMETERS,
+    output_type=_DECRYPTNOTESMARKED,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanNoteByOvk',
+    full_name='protocol.Wallet.ScanNoteByOvk',
+    index=99,
+    containing_service=None,
+    input_type=_OVKDECRYPTPARAMETERS,
+    output_type=_DECRYPTNOTES,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetSpendingKey',
+    full_name='protocol.Wallet.GetSpendingKey',
+    index=100,
+    containing_service=None,
+    input_type=_EMPTYMESSAGE,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetExpandedSpendingKey',
+    full_name='protocol.Wallet.GetExpandedSpendingKey',
+    index=101,
+    containing_service=None,
+    input_type=_BYTESMESSAGE,
+    output_type=_EXPANDEDSPENDINGKEYMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetAkFromAsk',
+    full_name='protocol.Wallet.GetAkFromAsk',
+    index=102,
+    containing_service=None,
+    input_type=_BYTESMESSAGE,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetNkFromNsk',
+    full_name='protocol.Wallet.GetNkFromNsk',
+    index=103,
+    containing_service=None,
+    input_type=_BYTESMESSAGE,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetIncomingViewingKey',
+    full_name='protocol.Wallet.GetIncomingViewingKey',
+    index=104,
+    containing_service=None,
+    input_type=_VIEWINGKEYMESSAGE,
+    output_type=_INCOMINGVIEWINGKEYMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetDiversifier',
+    full_name='protocol.Wallet.GetDiversifier',
+    index=105,
+    containing_service=None,
+    input_type=_EMPTYMESSAGE,
+    output_type=_DIVERSIFIERMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetNewShieldedAddress',
+    full_name='protocol.Wallet.GetNewShieldedAddress',
+    index=106,
+    containing_service=None,
+    input_type=_EMPTYMESSAGE,
+    output_type=_SHIELDEDADDRESSINFO,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetZenPaymentAddress',
+    full_name='protocol.Wallet.GetZenPaymentAddress',
+    index=107,
+    containing_service=None,
+    input_type=_INCOMINGVIEWINGKEYDIVERSIFIERMESSAGE,
+    output_type=_PAYMENTADDRESSMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetRcm',
+    full_name='protocol.Wallet.GetRcm',
+    index=108,
+    containing_service=None,
+    input_type=_EMPTYMESSAGE,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='IsSpend',
+    full_name='protocol.Wallet.IsSpend',
+    index=109,
+    containing_service=None,
+    input_type=_NOTEPARAMETERS,
+    output_type=_SPENDRESULT,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateShieldedTransactionWithoutSpendAuthSig',
+    full_name='protocol.Wallet.CreateShieldedTransactionWithoutSpendAuthSig',
+    index=110,
+    containing_service=None,
+    input_type=_PRIVATEPARAMETERSWITHOUTASK,
+    output_type=_TRANSACTIONEXTENTION,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetShieldTransactionHash',
+    full_name='protocol.Wallet.GetShieldTransactionHash',
+    index=111,
+    containing_service=None,
+    input_type=core_dot_Tron__pb2._TRANSACTION,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateSpendAuthSig',
+    full_name='protocol.Wallet.CreateSpendAuthSig',
+    index=112,
+    containing_service=None,
+    input_type=_SPENDAUTHSIGPARAMETERS,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateShieldNullifier',
+    full_name='protocol.Wallet.CreateShieldNullifier',
+    index=113,
+    containing_service=None,
+    input_type=_NFPARAMETERS,
+    output_type=_BYTESMESSAGE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='GetRewardInfo',
     full_name='protocol.Wallet.GetRewardInfo',
-    index=95,
+    index=114,
     containing_service=None,
     input_type=_BYTESMESSAGE,
     output_type=_NUMBERMESSAGE,
@@ -3157,7 +4709,7 @@ _WALLET = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetBrokerageInfo',
     full_name='protocol.Wallet.GetBrokerageInfo',
-    index=96,
+    index=115,
     containing_service=None,
     input_type=_BYTESMESSAGE,
     output_type=_NUMBERMESSAGE,
@@ -3166,7 +4718,7 @@ _WALLET = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='UpdateBrokerage',
     full_name='protocol.Wallet.UpdateBrokerage',
-    index=97,
+    index=116,
     containing_service=None,
     input_type=core_dot_Contract__pb2._UPDATEBROKERAGECONTRACT,
     output_type=_TRANSACTIONEXTENTION,
@@ -3184,8 +4736,8 @@ _WALLETSOLIDITY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=1,
   serialized_options=None,
-  serialized_start=15182,
-  serialized_end=17701,
+  serialized_start=19143,
+  serialized_end=22066,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAccount',
@@ -3368,9 +4920,54 @@ _WALLETSOLIDITY = _descriptor.ServiceDescriptor(
     serialized_options=_b('\202\323\344\223\002G\"\037/walletsolidity/generateaddress:\001*Z!\022\037/walletsolidity/generateaddress'),
   ),
   _descriptor.MethodDescriptor(
+    name='GetMerkleTreeVoucherInfo',
+    full_name='protocol.WalletSolidity.GetMerkleTreeVoucherInfo',
+    index=20,
+    containing_service=None,
+    input_type=core_dot_Contract__pb2._OUTPUTPOINTINFO,
+    output_type=core_dot_Contract__pb2._INCREMENTALMERKLEVOUCHERINFO,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanNoteByIvk',
+    full_name='protocol.WalletSolidity.ScanNoteByIvk',
+    index=21,
+    containing_service=None,
+    input_type=_IVKDECRYPTPARAMETERS,
+    output_type=_DECRYPTNOTES,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanAndMarkNoteByIvk',
+    full_name='protocol.WalletSolidity.ScanAndMarkNoteByIvk',
+    index=22,
+    containing_service=None,
+    input_type=_IVKDECRYPTANDMARKPARAMETERS,
+    output_type=_DECRYPTNOTESMARKED,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ScanNoteByOvk',
+    full_name='protocol.WalletSolidity.ScanNoteByOvk',
+    index=23,
+    containing_service=None,
+    input_type=_OVKDECRYPTPARAMETERS,
+    output_type=_DECRYPTNOTES,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='IsSpend',
+    full_name='protocol.WalletSolidity.IsSpend',
+    index=24,
+    containing_service=None,
+    input_type=_NOTEPARAMETERS,
+    output_type=_SPENDRESULT,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='TriggerConstantContract',
     full_name='protocol.WalletSolidity.TriggerConstantContract',
-    index=20,
+    index=25,
     containing_service=None,
     input_type=core_dot_Contract__pb2._TRIGGERSMARTCONTRACT,
     output_type=_TRANSACTIONEXTENTION,
@@ -3379,7 +4976,7 @@ _WALLETSOLIDITY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetRewardInfo',
     full_name='protocol.WalletSolidity.GetRewardInfo',
-    index=21,
+    index=26,
     containing_service=None,
     input_type=_BYTESMESSAGE,
     output_type=_NUMBERMESSAGE,
@@ -3388,7 +4985,7 @@ _WALLETSOLIDITY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetBrokerageInfo',
     full_name='protocol.WalletSolidity.GetBrokerageInfo',
-    index=22,
+    index=27,
     containing_service=None,
     input_type=_BYTESMESSAGE,
     output_type=_NUMBERMESSAGE,
@@ -3406,8 +5003,8 @@ _WALLETEXTENSION = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=2,
   serialized_options=None,
-  serialized_start=17704,
-  serialized_end=18261,
+  serialized_start=22069,
+  serialized_end=22626,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetTransactionsFromThis',
@@ -3457,8 +5054,8 @@ _DATABASE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=3,
   serialized_options=None,
-  serialized_start=18264,
-  serialized_end=18545,
+  serialized_start=22629,
+  serialized_end=22910,
   methods=[
   _descriptor.MethodDescriptor(
     name='getBlockReference',
@@ -3508,8 +5105,8 @@ _NETWORK = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=4,
   serialized_options=None,
-  serialized_start=18547,
-  serialized_end=18556,
+  serialized_start=22912,
+  serialized_end=22921,
   methods=[
 ])
 _sym_db.RegisterServiceDescriptor(_NETWORK)

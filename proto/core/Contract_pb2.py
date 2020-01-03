@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='protocol',
   syntax='proto3',
   serialized_options=_b('\n\017org.tron.protosB\010ContractZ)github.com/tronprotocol/grpc-gateway/core'),
-  serialized_pb=_b('\n\x13\x63ore/Contract.proto\x12\x08protocol\x1a\x0f\x63ore/Tron.proto\"l\n\x15\x41\x63\x63ountCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x17\n\x0f\x61\x63\x63ount_address\x18\x02 \x01(\x0c\x12#\n\x04type\x18\x03 \x01(\x0e\x32\x15.protocol.AccountType\"D\n\x15\x41\x63\x63ountUpdateContract\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\"A\n\x14SetAccountIdContract\x12\x12\n\naccount_id\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\"M\n\x10TransferContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nto_address\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"f\n\x15TransferAssetContract\x12\x12\n\nasset_name\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\x12\x12\n\nto_address\x18\x03 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"`\n\x11VoteAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x14\n\x0cvote_address\x18\x02 \x03(\x0c\x12\x0f\n\x07support\x18\x03 \x01(\x08\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\"\xa2\x01\n\x13VoteWitnessContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x31\n\x05votes\x18\x02 \x03(\x0b\x32\".protocol.VoteWitnessContract.Vote\x12\x0f\n\x07support\x18\x03 \x01(\x08\x1a\x30\n\x04Vote\x12\x14\n\x0cvote_address\x18\x01 \x01(\x0c\x12\x12\n\nvote_count\x18\x02 \x01(\x03\"o\n\x15UpdateSettingContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12%\n\x1d\x63onsume_user_resource_percent\x18\x03 \x01(\x03\"i\n\x19UpdateEnergyLimitContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12\x1b\n\x13origin_energy_limit\x18\x03 \x01(\x03\"C\n\x10\x43learABIContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\";\n\x15WitnessCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x0b\n\x03url\x18\x02 \x01(\x0c\"B\n\x15WitnessUpdateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nupdate_url\x18\x0c \x01(\x0c\"\x90\x04\n\x12\x41ssetIssueContract\x12\n\n\x02id\x18) \x01(\t\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x0c\n\x04name\x18\x02 \x01(\x0c\x12\x0c\n\x04\x61\x62\x62r\x18\x03 \x01(\x0c\x12\x14\n\x0ctotal_supply\x18\x04 \x01(\x03\x12@\n\rfrozen_supply\x18\x05 \x03(\x0b\x32).protocol.AssetIssueContract.FrozenSupply\x12\x0f\n\x07trx_num\x18\x06 \x01(\x05\x12\x11\n\tprecision\x18\x07 \x01(\x05\x12\x0b\n\x03num\x18\x08 \x01(\x05\x12\x12\n\nstart_time\x18\t \x01(\x03\x12\x10\n\x08\x65nd_time\x18\n \x01(\x03\x12\r\n\x05order\x18\x0b \x01(\x03\x12\x12\n\nvote_score\x18\x10 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x14 \x01(\x0c\x12\x0b\n\x03url\x18\x15 \x01(\x0c\x12\x1c\n\x14\x66ree_asset_net_limit\x18\x16 \x01(\x03\x12#\n\x1bpublic_free_asset_net_limit\x18\x17 \x01(\x03\x12#\n\x1bpublic_free_asset_net_usage\x18\x18 \x01(\x03\x12#\n\x1bpublic_latest_free_net_time\x18\x19 \x01(\x03\x1a:\n\x0c\x46rozenSupply\x12\x15\n\rfrozen_amount\x18\x01 \x01(\x03\x12\x13\n\x0b\x66rozen_days\x18\x02 \x01(\x03\"n\n\x1dParticipateAssetIssueContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nto_address\x18\x02 \x01(\x0c\x12\x12\n\nasset_name\x18\x03 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"\xa3\x01\n\x15\x46reezeBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x16\n\x0e\x66rozen_balance\x18\x02 \x01(\x03\x12\x17\n\x0f\x66rozen_duration\x18\x03 \x01(\x03\x12(\n\x08resource\x18\n \x01(\x0e\x32\x16.protocol.ResourceCode\x12\x18\n\x10receiver_address\x18\x0f \x01(\x0c\"t\n\x17UnfreezeBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12(\n\x08resource\x18\n \x01(\x0e\x32\x16.protocol.ResourceCode\x12\x18\n\x10receiver_address\x18\x0f \x01(\x0c\".\n\x15UnfreezeAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\"0\n\x17WithdrawBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\"{\n\x13UpdateAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\x0c\x12\x0b\n\x03url\x18\x03 \x01(\x0c\x12\x11\n\tnew_limit\x18\x04 \x01(\x03\x12\x18\n\x10new_public_limit\x18\x05 \x01(\x03\"\xa8\x01\n\x16ProposalCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x44\n\nparameters\x18\x02 \x03(\x0b\x32\x30.protocol.ProposalCreateContract.ParametersEntry\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"^\n\x17ProposalApproveContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0bproposal_id\x18\x02 \x01(\x03\x12\x17\n\x0fis_add_approval\x18\x03 \x01(\x08\"D\n\x16ProposalDeleteContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0bproposal_id\x18\x02 \x01(\x03\"\x87\x01\n\x13\x43reateSmartContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12-\n\x0cnew_contract\x18\x02 \x01(\x0b\x32\x17.protocol.SmartContract\x12\x18\n\x10\x63\x61ll_token_value\x18\x03 \x01(\x03\x12\x10\n\x08token_id\x18\x04 \x01(\x03\"\x95\x01\n\x14TriggerSmartContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12\x12\n\ncall_value\x18\x03 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x12\x18\n\x10\x63\x61ll_token_value\x18\x05 \x01(\x03\x12\x10\n\x08token_id\x18\x06 \x01(\x03\":\n\x12\x42uyStorageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\r\n\x05quant\x18\x02 \x01(\x03\"?\n\x17\x42uyStorageBytesContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\r\n\x05\x62ytes\x18\x02 \x01(\x03\"C\n\x13SellStorageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x15\n\rstorage_bytes\x18\x02 \x01(\x03\"\x9b\x01\n\x16\x45xchangeCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x16\n\x0e\x66irst_token_id\x18\x02 \x01(\x0c\x12\x1b\n\x13\x66irst_token_balance\x18\x03 \x01(\x03\x12\x17\n\x0fsecond_token_id\x18\x04 \x01(\x0c\x12\x1c\n\x14second_token_balance\x18\x05 \x01(\x03\"e\n\x16\x45xchangeInjectContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\"g\n\x18\x45xchangeWithdrawContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\"|\n\x1b\x45xchangeTransactionContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\x12\x10\n\x08\x65xpected\x18\x05 \x01(\x03\"\xab\x01\n\x1f\x41\x63\x63ountPermissionUpdateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12#\n\x05owner\x18\x02 \x01(\x0b\x32\x14.protocol.Permission\x12%\n\x07witness\x18\x03 \x01(\x0b\x32\x14.protocol.Permission\x12%\n\x07\x61\x63tives\x18\x04 \x03(\x0b\x32\x14.protocol.Permission\"C\n\x17UpdateBrokerageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x11\n\tbrokerage\x18\x02 \x01(\x05*)\n\x0cResourceCode\x12\r\n\tBANDWIDTH\x10\x00\x12\n\n\x06\x45NERGY\x10\x01\x42\x46\n\x0forg.tron.protosB\x08\x43ontractZ)github.com/tronprotocol/grpc-gateway/coreb\x06proto3')
+  serialized_pb=_b('\n\x13\x63ore/Contract.proto\x12\x08protocol\x1a\x0f\x63ore/Tron.proto\"l\n\x15\x41\x63\x63ountCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x17\n\x0f\x61\x63\x63ount_address\x18\x02 \x01(\x0c\x12#\n\x04type\x18\x03 \x01(\x0e\x32\x15.protocol.AccountType\"D\n\x15\x41\x63\x63ountUpdateContract\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\"A\n\x14SetAccountIdContract\x12\x12\n\naccount_id\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\"M\n\x10TransferContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nto_address\x18\x02 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\"@\n\rShieldAddress\x12\x17\n\x0fprivate_address\x18\x01 \x01(\x0c\x12\x16\n\x0epublic_address\x18\x02 \x01(\x0c\"f\n\x15TransferAssetContract\x12\x12\n\nasset_name\x18\x01 \x01(\x0c\x12\x15\n\rowner_address\x18\x02 \x01(\x0c\x12\x12\n\nto_address\x18\x03 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"`\n\x11VoteAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x14\n\x0cvote_address\x18\x02 \x03(\x0c\x12\x0f\n\x07support\x18\x03 \x01(\x08\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\"\xa2\x01\n\x13VoteWitnessContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x31\n\x05votes\x18\x02 \x03(\x0b\x32\".protocol.VoteWitnessContract.Vote\x12\x0f\n\x07support\x18\x03 \x01(\x08\x1a\x30\n\x04Vote\x12\x14\n\x0cvote_address\x18\x01 \x01(\x0c\x12\x12\n\nvote_count\x18\x02 \x01(\x03\"o\n\x15UpdateSettingContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12%\n\x1d\x63onsume_user_resource_percent\x18\x03 \x01(\x03\"i\n\x19UpdateEnergyLimitContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12\x1b\n\x13origin_energy_limit\x18\x03 \x01(\x03\"C\n\x10\x43learABIContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\";\n\x15WitnessCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x0b\n\x03url\x18\x02 \x01(\x0c\"B\n\x15WitnessUpdateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nupdate_url\x18\x0c \x01(\x0c\"\x90\x04\n\x12\x41ssetIssueContract\x12\n\n\x02id\x18) \x01(\t\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x0c\n\x04name\x18\x02 \x01(\x0c\x12\x0c\n\x04\x61\x62\x62r\x18\x03 \x01(\x0c\x12\x14\n\x0ctotal_supply\x18\x04 \x01(\x03\x12@\n\rfrozen_supply\x18\x05 \x03(\x0b\x32).protocol.AssetIssueContract.FrozenSupply\x12\x0f\n\x07trx_num\x18\x06 \x01(\x05\x12\x11\n\tprecision\x18\x07 \x01(\x05\x12\x0b\n\x03num\x18\x08 \x01(\x05\x12\x12\n\nstart_time\x18\t \x01(\x03\x12\x10\n\x08\x65nd_time\x18\n \x01(\x03\x12\r\n\x05order\x18\x0b \x01(\x03\x12\x12\n\nvote_score\x18\x10 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x14 \x01(\x0c\x12\x0b\n\x03url\x18\x15 \x01(\x0c\x12\x1c\n\x14\x66ree_asset_net_limit\x18\x16 \x01(\x03\x12#\n\x1bpublic_free_asset_net_limit\x18\x17 \x01(\x03\x12#\n\x1bpublic_free_asset_net_usage\x18\x18 \x01(\x03\x12#\n\x1bpublic_latest_free_net_time\x18\x19 \x01(\x03\x1a:\n\x0c\x46rozenSupply\x12\x15\n\rfrozen_amount\x18\x01 \x01(\x03\x12\x13\n\x0b\x66rozen_days\x18\x02 \x01(\x03\"n\n\x1dParticipateAssetIssueContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x12\n\nto_address\x18\x02 \x01(\x0c\x12\x12\n\nasset_name\x18\x03 \x01(\x0c\x12\x0e\n\x06\x61mount\x18\x04 \x01(\x03\"\xa3\x01\n\x15\x46reezeBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x16\n\x0e\x66rozen_balance\x18\x02 \x01(\x03\x12\x17\n\x0f\x66rozen_duration\x18\x03 \x01(\x03\x12(\n\x08resource\x18\n \x01(\x0e\x32\x16.protocol.ResourceCode\x12\x18\n\x10receiver_address\x18\x0f \x01(\x0c\"t\n\x17UnfreezeBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12(\n\x08resource\x18\n \x01(\x0e\x32\x16.protocol.ResourceCode\x12\x18\n\x10receiver_address\x18\x0f \x01(\x0c\".\n\x15UnfreezeAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\"0\n\x17WithdrawBalanceContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\"{\n\x13UpdateAssetContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\x0c\x12\x0b\n\x03url\x18\x03 \x01(\x0c\x12\x11\n\tnew_limit\x18\x04 \x01(\x03\x12\x18\n\x10new_public_limit\x18\x05 \x01(\x03\"\xa8\x01\n\x16ProposalCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x44\n\nparameters\x18\x02 \x03(\x0b\x32\x30.protocol.ProposalCreateContract.ParametersEntry\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\"^\n\x17ProposalApproveContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0bproposal_id\x18\x02 \x01(\x03\x12\x17\n\x0fis_add_approval\x18\x03 \x01(\x08\"D\n\x16ProposalDeleteContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0bproposal_id\x18\x02 \x01(\x03\"\x87\x01\n\x13\x43reateSmartContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12-\n\x0cnew_contract\x18\x02 \x01(\x0b\x32\x17.protocol.SmartContract\x12\x18\n\x10\x63\x61ll_token_value\x18\x03 \x01(\x03\x12\x10\n\x08token_id\x18\x04 \x01(\x03\"\x95\x01\n\x14TriggerSmartContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x18\n\x10\x63ontract_address\x18\x02 \x01(\x0c\x12\x12\n\ncall_value\x18\x03 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x12\x18\n\x10\x63\x61ll_token_value\x18\x05 \x01(\x03\x12\x10\n\x08token_id\x18\x06 \x01(\x03\":\n\x12\x42uyStorageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\r\n\x05quant\x18\x02 \x01(\x03\"?\n\x17\x42uyStorageBytesContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\r\n\x05\x62ytes\x18\x02 \x01(\x03\"C\n\x13SellStorageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x15\n\rstorage_bytes\x18\x02 \x01(\x03\"\x9b\x01\n\x16\x45xchangeCreateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x16\n\x0e\x66irst_token_id\x18\x02 \x01(\x0c\x12\x1b\n\x13\x66irst_token_balance\x18\x03 \x01(\x03\x12\x17\n\x0fsecond_token_id\x18\x04 \x01(\x0c\x12\x1c\n\x14second_token_balance\x18\x05 \x01(\x03\"e\n\x16\x45xchangeInjectContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\"g\n\x18\x45xchangeWithdrawContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\"|\n\x1b\x45xchangeTransactionContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x65xchange_id\x18\x02 \x01(\x03\x12\x10\n\x08token_id\x18\x03 \x01(\x0c\x12\r\n\x05quant\x18\x04 \x01(\x03\x12\x10\n\x08\x65xpected\x18\x05 \x01(\x03\"\xab\x01\n\x1f\x41\x63\x63ountPermissionUpdateContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12#\n\x05owner\x18\x02 \x01(\x0b\x32\x14.protocol.Permission\x12%\n\x07witness\x18\x03 \x01(\x0b\x32\x14.protocol.Permission\x12%\n\x07\x61\x63tives\x18\x04 \x03(\x0b\x32\x14.protocol.Permission\"#\n\x12\x41uthenticationPath\x12\r\n\x05value\x18\x01 \x03(\x08\"c\n\nMerklePath\x12:\n\x14\x61uthentication_paths\x18\x01 \x03(\x0b\x32\x1c.protocol.AuthenticationPath\x12\r\n\x05index\x18\x02 \x03(\x08\x12\n\n\x02rt\x18\x03 \x01(\x0c\"*\n\x0bOutputPoint\x12\x0c\n\x04hash\x18\x01 \x01(\x0c\x12\r\n\x05index\x18\x02 \x01(\x05\"O\n\x0fOutputPointInfo\x12)\n\nout_points\x18\x01 \x03(\x0b\x32\x15.protocol.OutputPoint\x12\x11\n\tblock_num\x18\x02 \x01(\x05\"\x1f\n\x0cPedersenHash\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\"\x8d\x01\n\x15IncrementalMerkleTree\x12$\n\x04left\x18\x01 \x01(\x0b\x32\x16.protocol.PedersenHash\x12%\n\x05right\x18\x02 \x01(\x0b\x32\x16.protocol.PedersenHash\x12\'\n\x07parents\x18\x03 \x03(\x0b\x32\x16.protocol.PedersenHash\"\xf1\x01\n\x18IncrementalMerkleVoucher\x12-\n\x04tree\x18\x01 \x01(\x0b\x32\x1f.protocol.IncrementalMerkleTree\x12&\n\x06\x66illed\x18\x02 \x03(\x0b\x32\x16.protocol.PedersenHash\x12/\n\x06\x63ursor\x18\x03 \x01(\x0b\x32\x1f.protocol.IncrementalMerkleTree\x12\x14\n\x0c\x63ursor_depth\x18\x04 \x01(\x03\x12\n\n\x02rt\x18\x05 \x01(\x0c\x12+\n\x0coutput_point\x18\n \x01(\x0b\x32\x15.protocol.OutputPoint\"c\n\x1cIncrementalMerkleVoucherInfo\x12\x34\n\x08vouchers\x18\x01 \x03(\x0b\x32\".protocol.IncrementalMerkleVoucher\x12\r\n\x05paths\x18\x02 \x03(\x0c\"\x8f\x01\n\x10SpendDescription\x12\x18\n\x10value_commitment\x18\x01 \x01(\x0c\x12\x0e\n\x06\x61nchor\x18\x02 \x01(\x0c\x12\x11\n\tnullifier\x18\x03 \x01(\x0c\x12\n\n\x02rk\x18\x04 \x01(\x0c\x12\x0f\n\x07zkproof\x18\x05 \x01(\x0c\x12!\n\x19spend_authority_signature\x18\x06 \x01(\x0c\"\x83\x01\n\x12ReceiveDescription\x12\x18\n\x10value_commitment\x18\x01 \x01(\x0c\x12\x17\n\x0fnote_commitment\x18\x02 \x01(\x0c\x12\x0b\n\x03\x65pk\x18\x03 \x01(\x0c\x12\r\n\x05\x63_enc\x18\x04 \x01(\x0c\x12\r\n\x05\x63_out\x18\x05 \x01(\x0c\x12\x0f\n\x07zkproof\x18\x06 \x01(\x0c\"\x91\x02\n\x18ShieldedTransferContract\x12 \n\x18transparent_from_address\x18\x01 \x01(\x0c\x12\x13\n\x0b\x66rom_amount\x18\x02 \x01(\x03\x12\x35\n\x11spend_description\x18\x03 \x03(\x0b\x32\x1a.protocol.SpendDescription\x12\x39\n\x13receive_description\x18\x04 \x03(\x0b\x32\x1c.protocol.ReceiveDescription\x12\x19\n\x11\x62inding_signature\x18\x05 \x01(\x0c\x12\x1e\n\x16transparent_to_address\x18\x06 \x01(\x0c\x12\x11\n\tto_amount\x18\x07 \x01(\x03\"C\n\x17UpdateBrokerageContract\x12\x15\n\rowner_address\x18\x01 \x01(\x0c\x12\x11\n\tbrokerage\x18\x02 \x01(\x05*)\n\x0cResourceCode\x12\r\n\tBANDWIDTH\x10\x00\x12\n\n\x06\x45NERGY\x10\x01\x42\x46\n\x0forg.tron.protosB\x08\x43ontractZ)github.com/tronprotocol/grpc-gateway/coreb\x06proto3')
   ,
   dependencies=[core_dot_Tron__pb2.DESCRIPTOR,])
 
@@ -43,8 +43,8 @@ _RESOURCECODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3867,
-  serialized_end=3908,
+  serialized_start=5274,
+  serialized_end=5315,
 )
 _sym_db.RegisterEnumDescriptor(_RESOURCECODE)
 
@@ -220,6 +220,44 @@ _TRANSFERCONTRACT = _descriptor.Descriptor(
 )
 
 
+_SHIELDADDRESS = _descriptor.Descriptor(
+  name='ShieldAddress',
+  full_name='protocol.ShieldAddress',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='private_address', full_name='protocol.ShieldAddress.private_address', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='public_address', full_name='protocol.ShieldAddress.public_address', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=376,
+  serialized_end=440,
+)
+
+
 _TRANSFERASSETCONTRACT = _descriptor.Descriptor(
   name='TransferAssetContract',
   full_name='protocol.TransferAssetContract',
@@ -267,8 +305,8 @@ _TRANSFERASSETCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=376,
-  serialized_end=478,
+  serialized_start=442,
+  serialized_end=544,
 )
 
 
@@ -319,8 +357,8 @@ _VOTEASSETCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=480,
-  serialized_end=576,
+  serialized_start=546,
+  serialized_end=642,
 )
 
 
@@ -357,8 +395,8 @@ _VOTEWITNESSCONTRACT_VOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=693,
-  serialized_end=741,
+  serialized_start=759,
+  serialized_end=807,
 )
 
 _VOTEWITNESSCONTRACT = _descriptor.Descriptor(
@@ -401,8 +439,8 @@ _VOTEWITNESSCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=579,
-  serialized_end=741,
+  serialized_start=645,
+  serialized_end=807,
 )
 
 
@@ -446,8 +484,8 @@ _UPDATESETTINGCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=743,
-  serialized_end=854,
+  serialized_start=809,
+  serialized_end=920,
 )
 
 
@@ -491,8 +529,8 @@ _UPDATEENERGYLIMITCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=961,
+  serialized_start=922,
+  serialized_end=1027,
 )
 
 
@@ -529,8 +567,8 @@ _CLEARABICONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=963,
-  serialized_end=1030,
+  serialized_start=1029,
+  serialized_end=1096,
 )
 
 
@@ -567,8 +605,8 @@ _WITNESSCREATECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1032,
-  serialized_end=1091,
+  serialized_start=1098,
+  serialized_end=1157,
 )
 
 
@@ -605,8 +643,8 @@ _WITNESSUPDATECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1093,
-  serialized_end=1159,
+  serialized_start=1159,
+  serialized_end=1225,
 )
 
 
@@ -643,8 +681,8 @@ _ASSETISSUECONTRACT_FROZENSUPPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1632,
-  serialized_end=1690,
+  serialized_start=1698,
+  serialized_end=1756,
 )
 
 _ASSETISSUECONTRACT = _descriptor.Descriptor(
@@ -799,8 +837,8 @@ _ASSETISSUECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1162,
-  serialized_end=1690,
+  serialized_start=1228,
+  serialized_end=1756,
 )
 
 
@@ -851,8 +889,8 @@ _PARTICIPATEASSETISSUECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1692,
-  serialized_end=1802,
+  serialized_start=1758,
+  serialized_end=1868,
 )
 
 
@@ -910,8 +948,8 @@ _FREEZEBALANCECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1805,
-  serialized_end=1968,
+  serialized_start=1871,
+  serialized_end=2034,
 )
 
 
@@ -955,8 +993,8 @@ _UNFREEZEBALANCECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1970,
-  serialized_end=2086,
+  serialized_start=2036,
+  serialized_end=2152,
 )
 
 
@@ -986,8 +1024,8 @@ _UNFREEZEASSETCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2088,
-  serialized_end=2134,
+  serialized_start=2154,
+  serialized_end=2200,
 )
 
 
@@ -1017,8 +1055,8 @@ _WITHDRAWBALANCECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2136,
-  serialized_end=2184,
+  serialized_start=2202,
+  serialized_end=2250,
 )
 
 
@@ -1076,8 +1114,8 @@ _UPDATEASSETCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2186,
-  serialized_end=2309,
+  serialized_start=2252,
+  serialized_end=2375,
 )
 
 
@@ -1114,8 +1152,8 @@ _PROPOSALCREATECONTRACT_PARAMETERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2431,
-  serialized_end=2480,
+  serialized_start=2497,
+  serialized_end=2546,
 )
 
 _PROPOSALCREATECONTRACT = _descriptor.Descriptor(
@@ -1151,8 +1189,8 @@ _PROPOSALCREATECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2312,
-  serialized_end=2480,
+  serialized_start=2378,
+  serialized_end=2546,
 )
 
 
@@ -1196,8 +1234,8 @@ _PROPOSALAPPROVECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2482,
-  serialized_end=2576,
+  serialized_start=2548,
+  serialized_end=2642,
 )
 
 
@@ -1234,8 +1272,8 @@ _PROPOSALDELETECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2578,
-  serialized_end=2646,
+  serialized_start=2644,
+  serialized_end=2712,
 )
 
 
@@ -1286,8 +1324,8 @@ _CREATESMARTCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2649,
-  serialized_end=2784,
+  serialized_start=2715,
+  serialized_end=2850,
 )
 
 
@@ -1352,8 +1390,8 @@ _TRIGGERSMARTCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2787,
-  serialized_end=2936,
+  serialized_start=2853,
+  serialized_end=3002,
 )
 
 
@@ -1390,8 +1428,8 @@ _BUYSTORAGECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2938,
-  serialized_end=2996,
+  serialized_start=3004,
+  serialized_end=3062,
 )
 
 
@@ -1428,8 +1466,8 @@ _BUYSTORAGEBYTESCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2998,
-  serialized_end=3061,
+  serialized_start=3064,
+  serialized_end=3127,
 )
 
 
@@ -1466,8 +1504,8 @@ _SELLSTORAGECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3063,
-  serialized_end=3130,
+  serialized_start=3129,
+  serialized_end=3196,
 )
 
 
@@ -1525,8 +1563,8 @@ _EXCHANGECREATECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3133,
-  serialized_end=3288,
+  serialized_start=3199,
+  serialized_end=3354,
 )
 
 
@@ -1577,8 +1615,8 @@ _EXCHANGEINJECTCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3290,
-  serialized_end=3391,
+  serialized_start=3356,
+  serialized_end=3457,
 )
 
 
@@ -1629,8 +1667,8 @@ _EXCHANGEWITHDRAWCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3393,
-  serialized_end=3496,
+  serialized_start=3459,
+  serialized_end=3562,
 )
 
 
@@ -1688,8 +1726,8 @@ _EXCHANGETRANSACTIONCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3498,
-  serialized_end=3622,
+  serialized_start=3564,
+  serialized_end=3688,
 )
 
 
@@ -1740,8 +1778,545 @@ _ACCOUNTPERMISSIONUPDATECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3625,
-  serialized_end=3796,
+  serialized_start=3691,
+  serialized_end=3862,
+)
+
+
+_AUTHENTICATIONPATH = _descriptor.Descriptor(
+  name='AuthenticationPath',
+  full_name='protocol.AuthenticationPath',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='protocol.AuthenticationPath.value', index=0,
+      number=1, type=8, cpp_type=7, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3864,
+  serialized_end=3899,
+)
+
+
+_MERKLEPATH = _descriptor.Descriptor(
+  name='MerklePath',
+  full_name='protocol.MerklePath',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='authentication_paths', full_name='protocol.MerklePath.authentication_paths', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='index', full_name='protocol.MerklePath.index', index=1,
+      number=2, type=8, cpp_type=7, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rt', full_name='protocol.MerklePath.rt', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3901,
+  serialized_end=4000,
+)
+
+
+_OUTPUTPOINT = _descriptor.Descriptor(
+  name='OutputPoint',
+  full_name='protocol.OutputPoint',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hash', full_name='protocol.OutputPoint.hash', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='index', full_name='protocol.OutputPoint.index', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4002,
+  serialized_end=4044,
+)
+
+
+_OUTPUTPOINTINFO = _descriptor.Descriptor(
+  name='OutputPointInfo',
+  full_name='protocol.OutputPointInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='out_points', full_name='protocol.OutputPointInfo.out_points', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='block_num', full_name='protocol.OutputPointInfo.block_num', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4046,
+  serialized_end=4125,
+)
+
+
+_PEDERSENHASH = _descriptor.Descriptor(
+  name='PedersenHash',
+  full_name='protocol.PedersenHash',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='content', full_name='protocol.PedersenHash.content', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4127,
+  serialized_end=4158,
+)
+
+
+_INCREMENTALMERKLETREE = _descriptor.Descriptor(
+  name='IncrementalMerkleTree',
+  full_name='protocol.IncrementalMerkleTree',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='left', full_name='protocol.IncrementalMerkleTree.left', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='right', full_name='protocol.IncrementalMerkleTree.right', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='parents', full_name='protocol.IncrementalMerkleTree.parents', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4161,
+  serialized_end=4302,
+)
+
+
+_INCREMENTALMERKLEVOUCHER = _descriptor.Descriptor(
+  name='IncrementalMerkleVoucher',
+  full_name='protocol.IncrementalMerkleVoucher',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='tree', full_name='protocol.IncrementalMerkleVoucher.tree', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='filled', full_name='protocol.IncrementalMerkleVoucher.filled', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cursor', full_name='protocol.IncrementalMerkleVoucher.cursor', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cursor_depth', full_name='protocol.IncrementalMerkleVoucher.cursor_depth', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rt', full_name='protocol.IncrementalMerkleVoucher.rt', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='output_point', full_name='protocol.IncrementalMerkleVoucher.output_point', index=5,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4305,
+  serialized_end=4546,
+)
+
+
+_INCREMENTALMERKLEVOUCHERINFO = _descriptor.Descriptor(
+  name='IncrementalMerkleVoucherInfo',
+  full_name='protocol.IncrementalMerkleVoucherInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='vouchers', full_name='protocol.IncrementalMerkleVoucherInfo.vouchers', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='paths', full_name='protocol.IncrementalMerkleVoucherInfo.paths', index=1,
+      number=2, type=12, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4548,
+  serialized_end=4647,
+)
+
+
+_SPENDDESCRIPTION = _descriptor.Descriptor(
+  name='SpendDescription',
+  full_name='protocol.SpendDescription',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value_commitment', full_name='protocol.SpendDescription.value_commitment', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='anchor', full_name='protocol.SpendDescription.anchor', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nullifier', full_name='protocol.SpendDescription.nullifier', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rk', full_name='protocol.SpendDescription.rk', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='zkproof', full_name='protocol.SpendDescription.zkproof', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spend_authority_signature', full_name='protocol.SpendDescription.spend_authority_signature', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4650,
+  serialized_end=4793,
+)
+
+
+_RECEIVEDESCRIPTION = _descriptor.Descriptor(
+  name='ReceiveDescription',
+  full_name='protocol.ReceiveDescription',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value_commitment', full_name='protocol.ReceiveDescription.value_commitment', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='note_commitment', full_name='protocol.ReceiveDescription.note_commitment', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='epk', full_name='protocol.ReceiveDescription.epk', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='c_enc', full_name='protocol.ReceiveDescription.c_enc', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='c_out', full_name='protocol.ReceiveDescription.c_out', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='zkproof', full_name='protocol.ReceiveDescription.zkproof', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4796,
+  serialized_end=4927,
+)
+
+
+_SHIELDEDTRANSFERCONTRACT = _descriptor.Descriptor(
+  name='ShieldedTransferContract',
+  full_name='protocol.ShieldedTransferContract',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='transparent_from_address', full_name='protocol.ShieldedTransferContract.transparent_from_address', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='from_amount', full_name='protocol.ShieldedTransferContract.from_amount', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spend_description', full_name='protocol.ShieldedTransferContract.spend_description', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='receive_description', full_name='protocol.ShieldedTransferContract.receive_description', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='binding_signature', full_name='protocol.ShieldedTransferContract.binding_signature', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='transparent_to_address', full_name='protocol.ShieldedTransferContract.transparent_to_address', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='to_amount', full_name='protocol.ShieldedTransferContract.to_amount', index=6,
+      number=7, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4930,
+  serialized_end=5203,
 )
 
 
@@ -1778,8 +2353,8 @@ _UPDATEBROKERAGECONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3798,
-  serialized_end=3865,
+  serialized_start=5205,
+  serialized_end=5272,
 )
 
 _ACCOUNTCREATECONTRACT.fields_by_name['type'].enum_type = core_dot_Tron__pb2._ACCOUNTTYPE
@@ -1795,10 +2370,23 @@ _CREATESMARTCONTRACT.fields_by_name['new_contract'].message_type = core_dot_Tron
 _ACCOUNTPERMISSIONUPDATECONTRACT.fields_by_name['owner'].message_type = core_dot_Tron__pb2._PERMISSION
 _ACCOUNTPERMISSIONUPDATECONTRACT.fields_by_name['witness'].message_type = core_dot_Tron__pb2._PERMISSION
 _ACCOUNTPERMISSIONUPDATECONTRACT.fields_by_name['actives'].message_type = core_dot_Tron__pb2._PERMISSION
+_MERKLEPATH.fields_by_name['authentication_paths'].message_type = _AUTHENTICATIONPATH
+_OUTPUTPOINTINFO.fields_by_name['out_points'].message_type = _OUTPUTPOINT
+_INCREMENTALMERKLETREE.fields_by_name['left'].message_type = _PEDERSENHASH
+_INCREMENTALMERKLETREE.fields_by_name['right'].message_type = _PEDERSENHASH
+_INCREMENTALMERKLETREE.fields_by_name['parents'].message_type = _PEDERSENHASH
+_INCREMENTALMERKLEVOUCHER.fields_by_name['tree'].message_type = _INCREMENTALMERKLETREE
+_INCREMENTALMERKLEVOUCHER.fields_by_name['filled'].message_type = _PEDERSENHASH
+_INCREMENTALMERKLEVOUCHER.fields_by_name['cursor'].message_type = _INCREMENTALMERKLETREE
+_INCREMENTALMERKLEVOUCHER.fields_by_name['output_point'].message_type = _OUTPUTPOINT
+_INCREMENTALMERKLEVOUCHERINFO.fields_by_name['vouchers'].message_type = _INCREMENTALMERKLEVOUCHER
+_SHIELDEDTRANSFERCONTRACT.fields_by_name['spend_description'].message_type = _SPENDDESCRIPTION
+_SHIELDEDTRANSFERCONTRACT.fields_by_name['receive_description'].message_type = _RECEIVEDESCRIPTION
 DESCRIPTOR.message_types_by_name['AccountCreateContract'] = _ACCOUNTCREATECONTRACT
 DESCRIPTOR.message_types_by_name['AccountUpdateContract'] = _ACCOUNTUPDATECONTRACT
 DESCRIPTOR.message_types_by_name['SetAccountIdContract'] = _SETACCOUNTIDCONTRACT
 DESCRIPTOR.message_types_by_name['TransferContract'] = _TRANSFERCONTRACT
+DESCRIPTOR.message_types_by_name['ShieldAddress'] = _SHIELDADDRESS
 DESCRIPTOR.message_types_by_name['TransferAssetContract'] = _TRANSFERASSETCONTRACT
 DESCRIPTOR.message_types_by_name['VoteAssetContract'] = _VOTEASSETCONTRACT
 DESCRIPTOR.message_types_by_name['VoteWitnessContract'] = _VOTEWITNESSCONTRACT
@@ -1827,6 +2415,17 @@ DESCRIPTOR.message_types_by_name['ExchangeInjectContract'] = _EXCHANGEINJECTCONT
 DESCRIPTOR.message_types_by_name['ExchangeWithdrawContract'] = _EXCHANGEWITHDRAWCONTRACT
 DESCRIPTOR.message_types_by_name['ExchangeTransactionContract'] = _EXCHANGETRANSACTIONCONTRACT
 DESCRIPTOR.message_types_by_name['AccountPermissionUpdateContract'] = _ACCOUNTPERMISSIONUPDATECONTRACT
+DESCRIPTOR.message_types_by_name['AuthenticationPath'] = _AUTHENTICATIONPATH
+DESCRIPTOR.message_types_by_name['MerklePath'] = _MERKLEPATH
+DESCRIPTOR.message_types_by_name['OutputPoint'] = _OUTPUTPOINT
+DESCRIPTOR.message_types_by_name['OutputPointInfo'] = _OUTPUTPOINTINFO
+DESCRIPTOR.message_types_by_name['PedersenHash'] = _PEDERSENHASH
+DESCRIPTOR.message_types_by_name['IncrementalMerkleTree'] = _INCREMENTALMERKLETREE
+DESCRIPTOR.message_types_by_name['IncrementalMerkleVoucher'] = _INCREMENTALMERKLEVOUCHER
+DESCRIPTOR.message_types_by_name['IncrementalMerkleVoucherInfo'] = _INCREMENTALMERKLEVOUCHERINFO
+DESCRIPTOR.message_types_by_name['SpendDescription'] = _SPENDDESCRIPTION
+DESCRIPTOR.message_types_by_name['ReceiveDescription'] = _RECEIVEDESCRIPTION
+DESCRIPTOR.message_types_by_name['ShieldedTransferContract'] = _SHIELDEDTRANSFERCONTRACT
 DESCRIPTOR.message_types_by_name['UpdateBrokerageContract'] = _UPDATEBROKERAGECONTRACT
 DESCRIPTOR.enum_types_by_name['ResourceCode'] = _RESOURCECODE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -1858,6 +2457,13 @@ TransferContract = _reflection.GeneratedProtocolMessageType('TransferContract', 
   # @@protoc_insertion_point(class_scope:protocol.TransferContract)
   })
 _sym_db.RegisterMessage(TransferContract)
+
+ShieldAddress = _reflection.GeneratedProtocolMessageType('ShieldAddress', (_message.Message,), {
+  'DESCRIPTOR' : _SHIELDADDRESS,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ShieldAddress)
+  })
+_sym_db.RegisterMessage(ShieldAddress)
 
 TransferAssetContract = _reflection.GeneratedProtocolMessageType('TransferAssetContract', (_message.Message,), {
   'DESCRIPTOR' : _TRANSFERASSETCONTRACT,
@@ -2078,6 +2684,83 @@ AccountPermissionUpdateContract = _reflection.GeneratedProtocolMessageType('Acco
   # @@protoc_insertion_point(class_scope:protocol.AccountPermissionUpdateContract)
   })
 _sym_db.RegisterMessage(AccountPermissionUpdateContract)
+
+AuthenticationPath = _reflection.GeneratedProtocolMessageType('AuthenticationPath', (_message.Message,), {
+  'DESCRIPTOR' : _AUTHENTICATIONPATH,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.AuthenticationPath)
+  })
+_sym_db.RegisterMessage(AuthenticationPath)
+
+MerklePath = _reflection.GeneratedProtocolMessageType('MerklePath', (_message.Message,), {
+  'DESCRIPTOR' : _MERKLEPATH,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.MerklePath)
+  })
+_sym_db.RegisterMessage(MerklePath)
+
+OutputPoint = _reflection.GeneratedProtocolMessageType('OutputPoint', (_message.Message,), {
+  'DESCRIPTOR' : _OUTPUTPOINT,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.OutputPoint)
+  })
+_sym_db.RegisterMessage(OutputPoint)
+
+OutputPointInfo = _reflection.GeneratedProtocolMessageType('OutputPointInfo', (_message.Message,), {
+  'DESCRIPTOR' : _OUTPUTPOINTINFO,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.OutputPointInfo)
+  })
+_sym_db.RegisterMessage(OutputPointInfo)
+
+PedersenHash = _reflection.GeneratedProtocolMessageType('PedersenHash', (_message.Message,), {
+  'DESCRIPTOR' : _PEDERSENHASH,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.PedersenHash)
+  })
+_sym_db.RegisterMessage(PedersenHash)
+
+IncrementalMerkleTree = _reflection.GeneratedProtocolMessageType('IncrementalMerkleTree', (_message.Message,), {
+  'DESCRIPTOR' : _INCREMENTALMERKLETREE,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IncrementalMerkleTree)
+  })
+_sym_db.RegisterMessage(IncrementalMerkleTree)
+
+IncrementalMerkleVoucher = _reflection.GeneratedProtocolMessageType('IncrementalMerkleVoucher', (_message.Message,), {
+  'DESCRIPTOR' : _INCREMENTALMERKLEVOUCHER,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IncrementalMerkleVoucher)
+  })
+_sym_db.RegisterMessage(IncrementalMerkleVoucher)
+
+IncrementalMerkleVoucherInfo = _reflection.GeneratedProtocolMessageType('IncrementalMerkleVoucherInfo', (_message.Message,), {
+  'DESCRIPTOR' : _INCREMENTALMERKLEVOUCHERINFO,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.IncrementalMerkleVoucherInfo)
+  })
+_sym_db.RegisterMessage(IncrementalMerkleVoucherInfo)
+
+SpendDescription = _reflection.GeneratedProtocolMessageType('SpendDescription', (_message.Message,), {
+  'DESCRIPTOR' : _SPENDDESCRIPTION,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.SpendDescription)
+  })
+_sym_db.RegisterMessage(SpendDescription)
+
+ReceiveDescription = _reflection.GeneratedProtocolMessageType('ReceiveDescription', (_message.Message,), {
+  'DESCRIPTOR' : _RECEIVEDESCRIPTION,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ReceiveDescription)
+  })
+_sym_db.RegisterMessage(ReceiveDescription)
+
+ShieldedTransferContract = _reflection.GeneratedProtocolMessageType('ShieldedTransferContract', (_message.Message,), {
+  'DESCRIPTOR' : _SHIELDEDTRANSFERCONTRACT,
+  '__module__' : 'core.Contract_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.ShieldedTransferContract)
+  })
+_sym_db.RegisterMessage(ShieldedTransferContract)
 
 UpdateBrokerageContract = _reflection.GeneratedProtocolMessageType('UpdateBrokerageContract', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEBROKERAGECONTRACT,

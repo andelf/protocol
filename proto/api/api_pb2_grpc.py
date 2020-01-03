@@ -491,6 +491,101 @@ class WalletStub(object):
         request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
         response_deserializer=core_dot_Tron__pb2.NodeInfo.FromString,
         )
+    self.CreateShieldedTransaction = channel.unary_unary(
+        '/protocol.Wallet/CreateShieldedTransaction',
+        request_serializer=api_dot_api__pb2.PrivateParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.TransactionExtention.FromString,
+        )
+    self.GetMerkleTreeVoucherInfo = channel.unary_unary(
+        '/protocol.Wallet/GetMerkleTreeVoucherInfo',
+        request_serializer=core_dot_Contract__pb2.OutputPointInfo.SerializeToString,
+        response_deserializer=core_dot_Contract__pb2.IncrementalMerkleVoucherInfo.FromString,
+        )
+    self.ScanNoteByIvk = channel.unary_unary(
+        '/protocol.Wallet/ScanNoteByIvk',
+        request_serializer=api_dot_api__pb2.IvkDecryptParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotes.FromString,
+        )
+    self.ScanAndMarkNoteByIvk = channel.unary_unary(
+        '/protocol.Wallet/ScanAndMarkNoteByIvk',
+        request_serializer=api_dot_api__pb2.IvkDecryptAndMarkParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotesMarked.FromString,
+        )
+    self.ScanNoteByOvk = channel.unary_unary(
+        '/protocol.Wallet/ScanNoteByOvk',
+        request_serializer=api_dot_api__pb2.OvkDecryptParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotes.FromString,
+        )
+    self.GetSpendingKey = channel.unary_unary(
+        '/protocol.Wallet/GetSpendingKey',
+        request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.GetExpandedSpendingKey = channel.unary_unary(
+        '/protocol.Wallet/GetExpandedSpendingKey',
+        request_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.ExpandedSpendingKeyMessage.FromString,
+        )
+    self.GetAkFromAsk = channel.unary_unary(
+        '/protocol.Wallet/GetAkFromAsk',
+        request_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.GetNkFromNsk = channel.unary_unary(
+        '/protocol.Wallet/GetNkFromNsk',
+        request_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.GetIncomingViewingKey = channel.unary_unary(
+        '/protocol.Wallet/GetIncomingViewingKey',
+        request_serializer=api_dot_api__pb2.ViewingKeyMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.IncomingViewingKeyMessage.FromString,
+        )
+    self.GetDiversifier = channel.unary_unary(
+        '/protocol.Wallet/GetDiversifier',
+        request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DiversifierMessage.FromString,
+        )
+    self.GetNewShieldedAddress = channel.unary_unary(
+        '/protocol.Wallet/GetNewShieldedAddress',
+        request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.ShieldedAddressInfo.FromString,
+        )
+    self.GetZenPaymentAddress = channel.unary_unary(
+        '/protocol.Wallet/GetZenPaymentAddress',
+        request_serializer=api_dot_api__pb2.IncomingViewingKeyDiversifierMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.PaymentAddressMessage.FromString,
+        )
+    self.GetRcm = channel.unary_unary(
+        '/protocol.Wallet/GetRcm',
+        request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.IsSpend = channel.unary_unary(
+        '/protocol.Wallet/IsSpend',
+        request_serializer=api_dot_api__pb2.NoteParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.SpendResult.FromString,
+        )
+    self.CreateShieldedTransactionWithoutSpendAuthSig = channel.unary_unary(
+        '/protocol.Wallet/CreateShieldedTransactionWithoutSpendAuthSig',
+        request_serializer=api_dot_api__pb2.PrivateParametersWithoutAsk.SerializeToString,
+        response_deserializer=api_dot_api__pb2.TransactionExtention.FromString,
+        )
+    self.GetShieldTransactionHash = channel.unary_unary(
+        '/protocol.Wallet/GetShieldTransactionHash',
+        request_serializer=core_dot_Tron__pb2.Transaction.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.CreateSpendAuthSig = channel.unary_unary(
+        '/protocol.Wallet/CreateSpendAuthSig',
+        request_serializer=api_dot_api__pb2.SpendAuthSigParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
+    self.CreateShieldNullifier = channel.unary_unary(
+        '/protocol.Wallet/CreateShieldNullifier',
+        request_serializer=api_dot_api__pb2.NfParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+        )
     self.GetRewardInfo = channel.unary_unary(
         '/protocol.Wallet/GetRewardInfo',
         request_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
@@ -1179,6 +1274,139 @@ class WalletServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CreateShieldedTransaction(self, request, context):
+    """for shiededTransaction
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetMerkleTreeVoucherInfo(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanNoteByIvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanAndMarkNoteByIvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanNoteByOvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetSpendingKey(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetExpandedSpendingKey(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetAkFromAsk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetNkFromNsk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetIncomingViewingKey(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetDiversifier(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetNewShieldedAddress(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetZenPaymentAddress(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetRcm(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def IsSpend(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def CreateShieldedTransactionWithoutSpendAuthSig(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetShieldTransactionHash(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def CreateSpendAuthSig(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def CreateShieldNullifier(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def GetRewardInfo(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -1678,6 +1906,101 @@ def add_WalletServicer_to_server(servicer, server):
           request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
           response_serializer=core_dot_Tron__pb2.NodeInfo.SerializeToString,
       ),
+      'CreateShieldedTransaction': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateShieldedTransaction,
+          request_deserializer=api_dot_api__pb2.PrivateParameters.FromString,
+          response_serializer=api_dot_api__pb2.TransactionExtention.SerializeToString,
+      ),
+      'GetMerkleTreeVoucherInfo': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMerkleTreeVoucherInfo,
+          request_deserializer=core_dot_Contract__pb2.OutputPointInfo.FromString,
+          response_serializer=core_dot_Contract__pb2.IncrementalMerkleVoucherInfo.SerializeToString,
+      ),
+      'ScanNoteByIvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanNoteByIvk,
+          request_deserializer=api_dot_api__pb2.IvkDecryptParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotes.SerializeToString,
+      ),
+      'ScanAndMarkNoteByIvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanAndMarkNoteByIvk,
+          request_deserializer=api_dot_api__pb2.IvkDecryptAndMarkParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotesMarked.SerializeToString,
+      ),
+      'ScanNoteByOvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanNoteByOvk,
+          request_deserializer=api_dot_api__pb2.OvkDecryptParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotes.SerializeToString,
+      ),
+      'GetSpendingKey': grpc.unary_unary_rpc_method_handler(
+          servicer.GetSpendingKey,
+          request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'GetExpandedSpendingKey': grpc.unary_unary_rpc_method_handler(
+          servicer.GetExpandedSpendingKey,
+          request_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+          response_serializer=api_dot_api__pb2.ExpandedSpendingKeyMessage.SerializeToString,
+      ),
+      'GetAkFromAsk': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAkFromAsk,
+          request_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'GetNkFromNsk': grpc.unary_unary_rpc_method_handler(
+          servicer.GetNkFromNsk,
+          request_deserializer=api_dot_api__pb2.BytesMessage.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'GetIncomingViewingKey': grpc.unary_unary_rpc_method_handler(
+          servicer.GetIncomingViewingKey,
+          request_deserializer=api_dot_api__pb2.ViewingKeyMessage.FromString,
+          response_serializer=api_dot_api__pb2.IncomingViewingKeyMessage.SerializeToString,
+      ),
+      'GetDiversifier': grpc.unary_unary_rpc_method_handler(
+          servicer.GetDiversifier,
+          request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
+          response_serializer=api_dot_api__pb2.DiversifierMessage.SerializeToString,
+      ),
+      'GetNewShieldedAddress': grpc.unary_unary_rpc_method_handler(
+          servicer.GetNewShieldedAddress,
+          request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
+          response_serializer=api_dot_api__pb2.ShieldedAddressInfo.SerializeToString,
+      ),
+      'GetZenPaymentAddress': grpc.unary_unary_rpc_method_handler(
+          servicer.GetZenPaymentAddress,
+          request_deserializer=api_dot_api__pb2.IncomingViewingKeyDiversifierMessage.FromString,
+          response_serializer=api_dot_api__pb2.PaymentAddressMessage.SerializeToString,
+      ),
+      'GetRcm': grpc.unary_unary_rpc_method_handler(
+          servicer.GetRcm,
+          request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'IsSpend': grpc.unary_unary_rpc_method_handler(
+          servicer.IsSpend,
+          request_deserializer=api_dot_api__pb2.NoteParameters.FromString,
+          response_serializer=api_dot_api__pb2.SpendResult.SerializeToString,
+      ),
+      'CreateShieldedTransactionWithoutSpendAuthSig': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateShieldedTransactionWithoutSpendAuthSig,
+          request_deserializer=api_dot_api__pb2.PrivateParametersWithoutAsk.FromString,
+          response_serializer=api_dot_api__pb2.TransactionExtention.SerializeToString,
+      ),
+      'GetShieldTransactionHash': grpc.unary_unary_rpc_method_handler(
+          servicer.GetShieldTransactionHash,
+          request_deserializer=core_dot_Tron__pb2.Transaction.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'CreateSpendAuthSig': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateSpendAuthSig,
+          request_deserializer=api_dot_api__pb2.SpendAuthSigParameters.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
+      'CreateShieldNullifier': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateShieldNullifier,
+          request_deserializer=api_dot_api__pb2.NfParameters.FromString,
+          response_serializer=api_dot_api__pb2.BytesMessage.SerializeToString,
+      ),
       'GetRewardInfo': grpc.unary_unary_rpc_method_handler(
           servicer.GetRewardInfo,
           request_deserializer=api_dot_api__pb2.BytesMessage.FromString,
@@ -1808,6 +2131,31 @@ class WalletSolidityStub(object):
         '/protocol.WalletSolidity/GenerateAddress',
         request_serializer=api_dot_api__pb2.EmptyMessage.SerializeToString,
         response_deserializer=api_dot_api__pb2.AddressPrKeyPairMessage.FromString,
+        )
+    self.GetMerkleTreeVoucherInfo = channel.unary_unary(
+        '/protocol.WalletSolidity/GetMerkleTreeVoucherInfo',
+        request_serializer=core_dot_Contract__pb2.OutputPointInfo.SerializeToString,
+        response_deserializer=core_dot_Contract__pb2.IncrementalMerkleVoucherInfo.FromString,
+        )
+    self.ScanNoteByIvk = channel.unary_unary(
+        '/protocol.WalletSolidity/ScanNoteByIvk',
+        request_serializer=api_dot_api__pb2.IvkDecryptParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotes.FromString,
+        )
+    self.ScanAndMarkNoteByIvk = channel.unary_unary(
+        '/protocol.WalletSolidity/ScanAndMarkNoteByIvk',
+        request_serializer=api_dot_api__pb2.IvkDecryptAndMarkParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotesMarked.FromString,
+        )
+    self.ScanNoteByOvk = channel.unary_unary(
+        '/protocol.WalletSolidity/ScanNoteByOvk',
+        request_serializer=api_dot_api__pb2.OvkDecryptParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.DecryptNotes.FromString,
+        )
+    self.IsSpend = channel.unary_unary(
+        '/protocol.WalletSolidity/IsSpend',
+        request_serializer=api_dot_api__pb2.NoteParameters.SerializeToString,
+        response_deserializer=api_dot_api__pb2.SpendResult.FromString,
         )
     self.TriggerConstantContract = channel.unary_unary(
         '/protocol.WalletSolidity/TriggerConstantContract',
@@ -1970,6 +2318,41 @@ class WalletSolidityServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetMerkleTreeVoucherInfo(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanNoteByIvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanAndMarkNoteByIvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ScanNoteByOvk(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def IsSpend(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def TriggerConstantContract(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -2093,6 +2476,31 @@ def add_WalletSolidityServicer_to_server(servicer, server):
           servicer.GenerateAddress,
           request_deserializer=api_dot_api__pb2.EmptyMessage.FromString,
           response_serializer=api_dot_api__pb2.AddressPrKeyPairMessage.SerializeToString,
+      ),
+      'GetMerkleTreeVoucherInfo': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMerkleTreeVoucherInfo,
+          request_deserializer=core_dot_Contract__pb2.OutputPointInfo.FromString,
+          response_serializer=core_dot_Contract__pb2.IncrementalMerkleVoucherInfo.SerializeToString,
+      ),
+      'ScanNoteByIvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanNoteByIvk,
+          request_deserializer=api_dot_api__pb2.IvkDecryptParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotes.SerializeToString,
+      ),
+      'ScanAndMarkNoteByIvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanAndMarkNoteByIvk,
+          request_deserializer=api_dot_api__pb2.IvkDecryptAndMarkParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotesMarked.SerializeToString,
+      ),
+      'ScanNoteByOvk': grpc.unary_unary_rpc_method_handler(
+          servicer.ScanNoteByOvk,
+          request_deserializer=api_dot_api__pb2.OvkDecryptParameters.FromString,
+          response_serializer=api_dot_api__pb2.DecryptNotes.SerializeToString,
+      ),
+      'IsSpend': grpc.unary_unary_rpc_method_handler(
+          servicer.IsSpend,
+          request_deserializer=api_dot_api__pb2.NoteParameters.FromString,
+          response_serializer=api_dot_api__pb2.SpendResult.SerializeToString,
       ),
       'TriggerConstantContract': grpc.unary_unary_rpc_method_handler(
           servicer.TriggerConstantContract,
