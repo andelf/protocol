@@ -8,6 +8,8 @@ import proto.core.Tron_pb2 as tron_pb
 import proto.core.Contract_pb2 as contract_pb
 
 
+
+
 raw_data = bytes.fromhex(
     '0a026d492208cd8eca44b3ab8af14098b6dbc2f12d5a69080112650a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412340a15419cf784b4cc7531f1598c4c322de9afdc597fe760121541340967e825557559dc46bbf0eabe5ccf99fd134e1880cab5ee017088ecd7c2f12d'
 )
@@ -38,7 +40,7 @@ raw_data = bytes.fromhex('0a0212462208055912e38b80f75e40f083f5c5f12d5aa301080412
 # raw_data = bytes.fromhex('0a029f9122082fc729fb70fb41514098d7d790f32d5a860108041281010a30747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e566f74655769746e657373436f6e7472616374124d0a1541340967e825557559dc46bbf0eabe5ccf99fd134e12190a1541f16412b9a17ee9408646e2a21e16478f72ed1e95100312190a1541f1a0466076c57c9f6d07decc86021ddbf8bae0b2100570c392d490f32d')
 
 
-
+raw_data = bytes.fromhex('0A021B05220803535967FF5DBD8B40A0D8C5E28E2E5AD001082E12CB010A3C747970652E676F6F676C65617069732E636F6D2F70726F746F636F6C2E4163636F756E745065726D697373696F6E557064617465436F6E7472616374128A010A154186E2825C8ECADECBC3D4839180297E0158F2D5F712241A056F776E657220013A190A154186E2825C8ECADECBC3D4839180297E0158F2D5F71001224B080210021A06616374697665200232207FFF1FC0033E01000000000000000000000000000000000000000000000000003A190A154186E2825C8ECADECBC3D4839180297E0158F2D5F7100270E185C2E28E2E')
 
 raw_obj = tron_pb.Transaction.raw.FromString(raw_data)
 print(raw_obj)
@@ -80,6 +82,12 @@ elif contract.type == tron_pb.Transaction.Contract.TransferAssetContract:
     trxfer = contract_pb.TransferAssetContract.FromString(contract.parameter.value)
     print(trxfer)
 
+elif contract.type == tron_pb.Transaction.Contract.AccountPermissionUpdateContract:
+    trxfer = contract_pb.AccountPermissionUpdateContract.FromString(contract.parameter.value)
+    print(trxfer)
+
+raise SystemExit
+
 
 
 print("-" * 80)
@@ -109,4 +117,12 @@ d75d6043f34454bb198152ab40632d781961985e799713bb6585f256ed8b324d7f63a0f513052058
 0a925a77febfd8dd8fc1be392d2a40f2d69df9ce92abd5a0c424a03842a0997fb56b8159b81f85684fe9d001aa9e48f6e7d3c9488e13a187e248deeb7dac76adf63f2ee82f271a6035b13e59c52306''')
 
 shielded = contract_pb.ShieldedTransferContract.FromString(raw_data)
+print(shielded)
+
+
+print('-' * 80)
+
+raw_data = bytes.fromhex("...")
+
+shielded = contract_pb.CreateSmartContract.FromString(raw_data)
 print(shielded)

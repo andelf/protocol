@@ -1,6 +1,7 @@
 import ecdsa
 import base58
 import ecdsa
+import random
 
 from eth_hash.auto import keccak as keccak_256
 
@@ -16,8 +17,12 @@ def verifying_key_to_addr(key):
     return addr
 
 
-for i in range(1, 16 - 1):
-    raw = hex(i)[-1] * 64
-    key = get_signing_key(bytes.fromhex(raw))
-    print('ADDR:', verifying_key_to_addr(key.get_verifying_key()).decode())
-    print('    :', raw)
+while True:
+    raw = bytes(random.sample(range(0, 256), 32))
+    key = get_signing_key(raw)
+    addr = verifying_key_to_addr(key.get_verifying_key()).decode()
+    # 0 (zero), O (capital o), I (capital i) and l (lower case L)
+    if addr.lower().endswith('mono'):
+        print(addr)
+        print('    :', raw.hex())
+        raise SystemExit
